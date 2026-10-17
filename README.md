@@ -1,1 +1,1 @@
-# Welcome to PawConnect
+# Welcome to ClubKit
