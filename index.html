@@ -1,1 +1,101 @@
-<!-- Entry point for the University Club Management System frontend. -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>ClubKit | Welcome</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="page-wrapper">
+			<main class="main-content">
+				<!-- Welcome Heading -->
+				<div class="welcome-section">
+					<div class="welcome-heading">
+						<h1>Welcome to <span>ClubKit</span></h1>
+
+						<p>
+							Your university clubs, activities, and community —
+							all in one place.
+						</p>
+					</div>
+
+					<!-- Role Selection -->
+					<div class="portal-container">
+						<div class="portal-heading">
+							<h2>Choose your portal</h2>
+							<p>Select your account type to continue.</p>
+						</div>
+
+						<div class="role-grid">
+							<!-- Student -->
+							<div class="role-card student">
+								<h3>Student</h3>
+
+								<p>
+									Discover clubs, request memberships, and
+									participate in university activities.
+								</p>
+
+								<a href="auth/login.html?role=student">
+									Student Login →
+								</a>
+							</div>
+
+							<!-- Club Executive -->
+							<div class="role-card executive">
+								<h3>Club Executive</h3>
+
+								<p>
+									Manage club members, executive positions,
+									events, and announcements.
+								</p>
+
+								<a href="auth/login.html?role=executive">
+									Executive Login →
+								</a>
+							</div>
+
+							<!-- Faculty Advisor -->
+							<div class="role-card advisor">
+								<h3>Faculty Advisor</h3>
+
+								<p>
+									Review event requests, supervise clubs, and
+									monitor their activities.
+								</p>
+
+								<a href="auth/login.html?role=advisor">
+									Advisor Login →
+								</a>
+							</div>
+
+							<!-- Student Affairs -->
+							<div class="role-card affairs">
+								<h3>Student Affairs</h3>
+
+								<p>
+									Manage club registrations, maintain the
+									directory, and assign advisors.
+								</p>
+
+								<a href="auth/login.html?role=student-affairs">
+									Staff Login →
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<p>© 2026 ClubKit. University Club Management System.</p>
+				<p>Connecting campus communities.</p>
+			</footer>
+		</div>
+	</body>
+</html>

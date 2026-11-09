@@ -1,1 +1,178 @@
-/* Global visual foundation: typography, colors, resets, and shared design tokens. */
+/* ---------- General ---------- */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	color: #172033;
+	background-color: #f4f6fb;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 800;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ---------- Main Content ---------- */
+
+.main-content {
+	padding: 65px 20px 75px;
+}
+
+.welcome-section {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+/* ---------- Welcome Heading ---------- */
+
+.welcome-heading {
+	text-align: center;
+	margin-bottom: 42px;
+}
+
+.welcome-heading h1 {
+	color: #111c35;
+	font-size: 42px;
+	margin-bottom: 13px;
+}
+
+.welcome-heading h1 span {
+	color: #4f46e5;
+}
+
+.welcome-heading p {
+	color: #64748b;
+	font-size: 14px;
+}
+
+/* ---------- Portal Container ---------- */
+
+.portal-container {
+	background-color: white;
+	padding: 30px;
+	border: 1px solid #e5e9f1;
+	border-radius: 15px;
+}
+
+.portal-heading {
+	margin-bottom: 25px;
+}
+
+.portal-heading h2 {
+	color: #111c35;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.portal-heading p {
+	color: #64748b;
+	font-size: 13px;
+}
+
+/* ---------- Role Cards ---------- */
+
+.role-grid {
+	text-align: center;
+}
+
+.role-card {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+
+	width: 48%;
+	min-height: 185px;
+
+	padding: 25px;
+	margin: 0 0 15px 0.5%;
+
+	background-color: white;
+	border: 1px solid #e5e9f1;
+	border-top: 4px solid #4f46e5;
+	border-radius: 10px;
+}
+
+/* Role Colors */
+
+.student {
+	border-top-color: #4f46e5;
+}
+
+.executive {
+	border-top-color: #0d9488;
+}
+
+.advisor {
+	border-top-color: #d97706;
+}
+
+.affairs {
+	border-top-color: #db2777;
+}
+
+/* Card Content */
+
+.role-card h3 {
+	color: #111c35;
+	font-size: 21px;
+	margin-bottom: 8px;
+}
+
+.role-card p {
+	color: #64748b;
+	font-size: 14px;
+	line-height: 1.7;
+	margin-bottom: 18px;
+}
+
+.role-card a {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	color: #4f46e5;
+}
+
+.student a {
+	color: #4f46e5;
+}
+
+.executive a {
+	color: #0d9488;
+}
+
+.advisor a {
+	color: #d97706;
+}
+
+.affairs a {
+	color: #db2777;
+}
+
+/* Card Hover */
+
+.role-card:hover {
+	border-color: #4f46e5;
+	box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+	transform: translateY(-4px);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+	background-color: white;
+	border-top: 1px solid #e5e9f1;
+	padding: 22px;
+	text-align: center;
+}
+
+.footer p {
+	display: inline-block;
+	color: #64748b;
+	font-size: 11px;
+	margin: 5px 15px;
+}
