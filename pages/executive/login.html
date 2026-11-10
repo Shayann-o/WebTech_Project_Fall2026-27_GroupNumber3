@@ -3,9 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Login</title>
+    <title>ClubKit - Executive Login</title>
+    <link rel="stylesheet" href="../../css/executive/login.css">
 </head>
 <body>
-    
+
+    <div class="Container">
+
+        <div class="box">
+
+            <!-- Header -->
+            <div class="header">
+
+                <div class="logo">ClubKit</div>
+
+                <span class="badge">Executive Portal</span>
+
+                <h1>Welcome Back</h1>
+
+                <p>Sign in to manage your university club operations</p>
+
+            </div>
+
+
+            <!-- Login Form -->
+            <form>
+
+                <fieldset class="form-fieldset">
+
+                    <legend>Executive Credentials</legend>
+
+
+                    <!-- Club Selection -->
+                    <div class="form-group">
+
+                        <label for="club">Select Your Club:</label>
+
+                        <select id="club" name="club" required>
+
+                            <option value="">-- Choose Assigned Club --</option>
+
+                            <option value="Computer">Computer club</option>
+
+                            <option value="Research">Research Club</option>
+
+                            <option value="photography">Photography Club</option>
+
+                            <option value="debating">Debating Society</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Executive ID -->
+                    <div class="form-group">
+
+                        <label for="execId">University Email or Student ID:</label>
+
+                        <input
+                            type="text"
+                            id="execId"
+                            name="execId"
+                            placeholder="e.g. 24-XXXXX-X or name@aiub.edu"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="password">Password:</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+                    <div class="form-options">
+
+                        <div class="remember-me">
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                                name="remember"
+                                value="yes"
+                            >
+
+                            <label for="remember">Keep me signed in</label>
+
+                        </div>
+
+                        <a href="#" class="forgot-link">Forgot password?</a>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+
+                        <input
+                            type="submit"
+                            value="Sign In to Dashboard"
+                            class="btn-primary"
+                        >
+
+                        <input
+                            type="reset"
+                            value="Clear"
+                            class="btn-secondary"
+                        >
+
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+
+            <!-- Footer -->
+            <div class="footer">
+
+                <p>
+                    Newly elected executive?
+                    <a href="#">Register</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>
