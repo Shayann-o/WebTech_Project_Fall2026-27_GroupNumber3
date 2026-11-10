@@ -178,3 +178,21 @@ a {
 	font-size: 11px;
 	margin: 5px 15px;
 }
+
+#LoginMessage {
+	color: green;
+	text-align: center;
+	font-weight: bold;
+}
+
+#EmailError,
+#PasswordError {
+	color: redUniversity Club Management System;
+	text-align: left;
+	font-size: 14px;
+}
+
+#submit,
+#reset {
+	width: 48%;
+}
