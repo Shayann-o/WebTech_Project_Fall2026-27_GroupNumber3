@@ -4,28 +4,25 @@
 		<meta charset="UTF-8" />
 		<title>Treasurer Login</title>
 		<link rel="stylesheet" href="../../css/style.css" />
-		<script src="../JS/TreasurerLogin.js"></script>
+		<script src="../../js/pages/treasurer/login.js"></script>
 	</head>
 
 	<body>
-		<img src="logo.png" id="logo" />
-
-		<br />
-		<br />
-
-		<div class="header">
-			<h1>Treasurer Portal</h1>
-			<h3>University Club Management System</h3>
+		<div class="treasurer-login-header">
+			<h1>Club<span style="color: #db2777">Kit</span></h1>
+			<h3>Treasurer Login</h3>
 		</div>
 
 		<div class="topnav">
-			<a href="../index.html"> Home </a>
+			<a href="../../index.html">Home</a>
+			<a href="./login.html" class="active">Login</a>
+			<a href="./registration.html">Registration</a>
 		</div>
 
 		<p id="demotext"></p>
 
 		<form onsubmit="return collect_login_data();">
-			<fieldset>
+			<fieldset class="login-fieldset">
 				<legend>Treasurer Account Login</legend>
 
 				<table>
@@ -82,15 +79,24 @@
 
 			<br />
 
-			<input type="submit" id="submit" value="Login" />
+			<input type="submit" id="login-submit" value="Login" />
 
-			<input type="reset" id="reset" value="Clear" />
+			<input type="reset" id="login-reset" value="Clear" />
 		</form>
 
 		<p id="LoginMessage"></p>
 
+		<div class="test-account">
+			<h4>Sample Login Credentials</h4>
+			<p>treasurer@clubkit.edu</p>
+			<p>treasurer123</p>
+		</div>
+
 		<div class="footer">
-			<h5>University Club Management System</h5>
+			<p>
+				&copy; 2026 ClubKit. Connecting Students Through Clubs &
+				Activities. All Rights Reserved.
+			</p>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Treasurer Registration</title>
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script src="../../js/pages/treasurer/registration.js"></script>
+	</head>
+
+	<body>
+		<div class="treasurer-login-header">
+			<h1>Club<span style="color: #db2777">Kit</span></h1>
+			<h3>Treasurer Registration</h3>
+		</div>
+
+		<div class="topnav">
+			<a href="../../index.html">Home</a>
+			<a href="./login.html">Login</a>
+			<a href="./registration.html" class="active">Registration</a>
+		</div>
+
+		<p id="demotext"></p>
+
+		<form onsubmit="return collect_registration_data();">
+			<fieldset class="registration-fieldset">
+				<legend>Applicant Information</legend>
+
+				<table>
+					<tr>
+						<td>
+							<label for="StudentID"> Student ID: </label>
+						</td>
+
+						<td>
+							<input
+								type="text"
+								id="StudentID"
+								placeholder="Enter your student ID"
+							/>
+
+							<p id="StudentIDError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="MemberID"> Club Member ID: </label>
+						</td>
+
+						<td>
+							<input
+								type="text"
+								id="MemberID"
+								placeholder="Enter your club member ID (optional)"
+							/>
+
+							<p id="MemberIDError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ApplicantName"> Full Name: </label>
+						</td>
+
+						<td>
+							<input
+								type="text"
+								id="ApplicantName"
+								placeholder="Enter your full name"
+							/>
+
+							<p id="NameError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ApplicantEmail">
+								University Email:
+							</label>
+						</td>
+
+						<td>
+							<input
+								type="email"
+								id="ApplicantEmail"
+								placeholder="Enter your university email"
+							/>
+
+							<p id="EmailError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ClubName"> Applying Club: </label>
+						</td>
+
+						<td>
+							<select id="ClubName">
+								<option value="">Select Club</option>
+								<option value="Programming Club">
+									Programming Club
+								</option>
+								<option value="Robotics Club">
+									Robotics Club
+								</option>
+								<option value="Cultural Club">
+									Cultural Club
+								</option>
+								<option value="Sports Club">Sports Club</option>
+							</select>
+
+							<p id="ClubError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="CurrentPosition">
+								Current Club Position:
+							</label>
+						</td>
+
+						<td>
+							<select id="CurrentPosition">
+								<option value="">Select Position</option>
+								<option value="Member">General Member</option>
+								<option value="Executive">
+									Club Executive
+								</option>
+								<option value="Other">Other</option>
+							</select>
+
+							<p id="PositionError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ApplyingFor"> Applying For: </label>
+						</td>
+
+						<td>
+							<input
+								type="text"
+								id="ApplyingFor"
+								value="Treasurer"
+								readonly
+							/>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<fieldset class="registration-fieldset">
+				<legend>Application Details</legend>
+
+				<table>
+					<tr>
+						<td>
+							<label for="Experience">
+								Previous Experience:
+							</label>
+						</td>
+
+						<td>
+							<textarea
+								id="Experience"
+								rows="4"
+								placeholder="Describe your previous experience"
+							></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="Statement">
+								Application Statement:
+							</label>
+						</td>
+
+						<td>
+							<textarea
+								id="Statement"
+								rows="5"
+								placeholder="Why do you want to become the Treasurer?"
+							></textarea>
+
+							<p id="StatementError"></p>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<br />
+
+			<input type="submit" id="reg-submit" value="Submit Application" />
+
+			<input type="reset" id="reg-reset" value="Clear" />
+		</form>
+
+		<p id="RegistrationMessage"></p>
+
+		<div class="footer">
+			<p>
+				&copy; 2026 ClubKit. Connecting Students Through Clubs &
+				Activities. All Rights Reserved.
+			</p>
+		</div>
+	</body>
+</html>

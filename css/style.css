@@ -57,8 +57,8 @@ a {
 	padding: 30px;
 	border: 1px solid #e5e9f1;
 	border-radius: 15px;
-	margin-bottom: 220px;
-	margin-top: 150px;
+	margin-bottom: 22px;
+	margin-top: 60px;
 }
 
 .portal-heading {
@@ -101,7 +101,7 @@ a {
 
 /* Role Colors */
 
-.student {
+.member {
 	border-top-color: #51d7e0;
 }
 
@@ -109,11 +109,11 @@ a {
 	border-top-color: #0d9488;
 }
 
-.advisor {
+.coordinator {
 	border-top-color: #d97706;
 }
 
-.affairs {
+.treasurer {
 	border-top-color: #db2777;
 }
 
@@ -139,7 +139,7 @@ a {
 	color: #4f46e5;
 }
 
-.student a {
+.member a {
 	color: #51d7e0;
 }
 
@@ -147,11 +147,11 @@ a {
 	color: #0d9488;
 }
 
-.advisor a {
+.coordinator a {
 	color: #d97706;
 }
 
-.affairs a {
+.treasurer a {
 	color: #db2777;
 }
 
@@ -166,33 +166,283 @@ a {
 /* ---------- Footer ---------- */
 
 .footer {
-	background-color: white;
-	border-top: 1px solid #e5e9f1;
-	padding: 22px;
+	background-color: #142b4a;
+	color: white;
 	text-align: center;
+	padding: 6px 12px;
+	margin: 80px 10px 0;
+	border-radius: 6px;
 }
 
 .footer p {
 	display: inline-block;
-	color: #64748b;
+	color: #e6c98b;
 	font-size: 11px;
-	margin: 5px 15px;
+	margin: 2px 10px;
 }
 
-#LoginMessage {
-	color: green;
+/* ------------------------Treasurer Login------------------------- */
+/* Treasurer Header */
+.treasurer-login-header {
+	background-color: #142b4a;
+	color: white;
+	border: 1px solid #142b4a;
+	border-radius: 10px;
+	padding: 22px;
 	text-align: center;
+	margin: 15px 10px;
+}
+
+.treasurer-login-header h1 {
+	margin: 5px;
+	color: white;
+}
+
+.treasurer-login-header h3 {
+	color: #b9d8e8;
+	font-weight: normal;
+}
+
+/* Navigation Bar */
+
+.topnav {
+	position: sticky;
+	top: 0;
+	background-color: #ffffff;
+	border: 1px solid #dce4ee;
+	border-radius: 8px;
+	padding: 12px;
+	text-align: center;
+	margin: 10px;
+}
+
+.topnav a {
+	display: inline-block;
+	color: #142b4a;
+	text-decoration: none;
+	padding: 10px 25px;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: 0.2s;
+}
+
+.topnav a:hover {
+	background-color: #eaf4f8;
+	color: #087e8b;
+}
+
+.topnav a.active {
+	background-color: #142b4a;
+	color: white;
+}
+
+/* Login Form */
+fieldset {
+	background-color: #ffffff;
+	border: 2px solid #cbd9e8;
+	border-radius: 12px;
+	padding: 25px;
+	margin: 20px 10px;
+	box-shadow: 0 3px 10px rgba(20, 43, 74, 0.08);
+}
+
+.login-fieldset legend,
+.registration-fieldset legend {
+	border-radius: 6px;
+	padding: 8px 18px;
 	font-weight: bold;
 }
 
-#EmailError,
-#PasswordError {
-	color: redUniversity Club Management System;
-	text-align: left;
-	font-size: 14px;
+.login-fieldset legend {
+	background-color: #087e8b;
+	color: white;
+	border: 1px solid #087e8b;
 }
 
-#submit,
-#reset {
+/* Table */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 12px 8px;
+	vertical-align: middle;
+}
+
+label {
+	color: #243b53;
+	font-weight: bold;
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 11px;
+	font-size: 15px;
+	border: 1px solid #b8c7d9;
+	border-radius: 6px;
+	background-color: #f8fafc;
+	outline: none;
+}
+
+.login-fieldset input[type="email"]:focus,
+input[type="password"]:focus {
+	border: 2px solid #087e8b;
+	background-color: white;
+}
+
+/* Remember Me */
+input[type="checkbox"] {
+	accent-color: #087e8b;
+	width: 16px;
+	height: 16px;
+}
+
+/* Error Messages */
+#EmailError,
+#PasswordError {
+	color: #d62828;
+	text-align: left;
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+/* Login Message */
+#LoginMessage {
+	color: #087e4b;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+/* Login and Reset Buttons */
+#login-submit,
+#login-reset,
+#reg-submit,
+#reg-reset {
 	width: 48%;
+	padding: 12px;
+	margin-left: 10px;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+#login-submit {
+	background-color: #087e8b;
+	color: white;
+}
+
+#login-reset {
+	background-color: #64748b;
+	color: white;
+}
+
+#login-submit:hover {
+	background-color: #065f68;
+}
+
+#login-reset:hover {
+	background-color: #475569;
+}
+
+.test-account {
+	background-color: #eaf4f8;
+	border: 1px dashed #087e8b;
+	border-radius: 8px;
+	padding: 12px 18px;
+	margin: 15px 10px;
+	text-align: center;
+}
+
+.test-account h4 {
+	color: #142b4a;
+	margin: 5px 0 10px;
+}
+
+.test-account p {
+	color: #475569;
+	font-size: 13px;
+	margin: 5px 0;
+}
+
+/* ------------------------Treasurer Registration------------------------- */
+
+.registration-fieldset legend {
+	background-color: #be185d;
+	color: white;
+	border: 1px solid #be185d;
+}
+
+.registration-fieldset input[type="email"],
+input[type="text"],
+select,
+textarea {
+	width: 100%;
+	padding: 11px;
+	font-size: 15px;
+	border: 1px solid #b8c7d9;
+	border-radius: 6px;
+	background-color: #f8fafc;
+	outline: none;
+}
+
+.registration-fieldset input[type="email"]:focus,
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+	border: 2px solid #be185d;
+	background-color: white;
+}
+
+textarea {
+	font-family: Arial, sans-serif;
+	resize: vertical;
+}
+
+input[readonly] {
+	background-color: #e9eef5;
+	color: #142b4a;
+	font-weight: bold;
+}
+
+#StudentIDError,
+#NameError,
+#EmailError,
+#ClubError,
+#PositionError,
+#StatementError {
+	color: #d62828;
+	text-align: left;
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+#RegistrationMessage {
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#reg-submit {
+	background-color: #be185d;
+	color: white;
+}
+
+#reg-reset {
+	background-color: #64748b;
+	color: white;
+}
+
+#reg-submit:hover {
+	background-color: #9d174d;
+}
+
+#reg-reset:hover {
+	background-color: #475569;
 }
