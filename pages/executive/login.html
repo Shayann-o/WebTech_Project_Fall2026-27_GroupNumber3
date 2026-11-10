@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClubKit - Executive Login</title>
     <link rel="stylesheet" href="../../css/executive/login.css">
+    <script src="../../js\pages\executive\login.js"></script>
+
 </head>
 <body>
 
@@ -27,33 +29,11 @@
 
 
             <!-- Login Form -->
-            <form>
+            <form onsubmit="return validate_login()">
 
                 <fieldset class="form-fieldset">
 
                     <legend>Executive Credentials</legend>
-
-
-                    <!-- Club Selection -->
-                    <div class="form-group">
-
-                        <label for="club">Select Your Club:</label>
-
-                        <select id="club" name="club" required>
-
-                            <option value="">-- Choose Assigned Club --</option>
-
-                            <option value="Computer">Computer club</option>
-
-                            <option value="Research">Research Club</option>
-
-                            <option value="photography">Photography Club</option>
-
-                            <option value="debating">Debating Society</option>
-
-                        </select>
-
-                    </div>
 
 
                     <!-- Executive ID -->
@@ -66,9 +46,8 @@
                             id="execId"
                             name="execId"
                             placeholder="e.g. 24-XXXXX-X or name@aiub.edu"
-                            required
                         >
-
+                     <p id="idError" class="error"></p>
                     </div>
 
 
@@ -82,9 +61,8 @@
                             id="password"
                             name="password"
                             placeholder="Enter your password"
-                            required
                         >
-
+                    <p id="passError" class="error"></p>
                     </div>
 
 
@@ -110,21 +88,10 @@
 
 
                     <!-- Buttons -->
-                    <div class="form-actions">
-
-                        <input
-                            type="submit"
-                            value="Sign In to Dashboard"
-                            class="btn-primary"
-                        >
-
-                        <input
-                            type="reset"
-                            value="Clear"
-                            class="btn-secondary"
-                        >
-
-                    </div>
+                <div class="form-actions">
+                        <input type="submit" value="Sign In to Dashboard" class="btn-primary">
+                        <input type="reset" value="Clear" class="btn-secondary">
+                </div>
 
                 </fieldset>
 

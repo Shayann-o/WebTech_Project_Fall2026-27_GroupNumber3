@@ -99,8 +99,7 @@ body{
 }
 
 .form-group input[type="text"],
-.form-group input[type="password"],
-.form-group select{
+.form-group input[type="password"]{
     width: 100%;
     padding: 10px;
     border: 1px solid rgb(203, 213, 225);
@@ -204,4 +203,10 @@ body{
     color: rgb(79, 70, 229);
     font-weight: bold;
     text-decoration: none;
+}
+
+.error {
+    color: rgb(220, 38, 38);
+    font-size: 12px;
+    margin: 4px 0 0 0;
 }
