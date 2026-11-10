@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubKit - Executive Registration</title>
+    <link rel="stylesheet" href="../../css/executive/registration.css">
+    <script src="../../js\pages/executive/registration.js"></script>
+   
+</head>
+<body>
+
+    <div class="Container">
+
+        <div class="box">
+
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">ClubKit</div>
+                <span class="badge">Executive Portal</span>
+                <h1>Executive Registration</h1>
+                <p>Register your account as a university club executive</p>
+            </div>
+
+            <!-- Registration Form -->
+            <form onsubmit="return validate_registration()">
+
+                <!-- Personal Information -->
+                <fieldset class="form-fieldset">
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                        <p id="nameError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentId">Student ID:</label>
+                        <input type="text" id="studentId" name="studentId" placeholder="e.g. 24-XXXXX-X">
+                        <p id="idError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clubMemberId">Club Member ID:</label>
+                        <input type="text" id="clubMemberId" name="clubMemberId" placeholder="e.g. CM-1024">
+                        <p id="memberIdError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">University Email:</label>
+                        <input type="email" id="email" name="email" placeholder="name@aiub.edu">
+                        <p id="emailError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Contact Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your contact number">
+                        <p id="phoneError" class="error"></p>
+                    </div>
+                </fieldset>
+
+                <!-- Academic Information -->
+                <fieldset class="form-fieldset">
+                    <legend>Academic Information</legend>
+
+                    <div class="form-group">
+                        <label for="department">Department:</label>
+                        <select id="department" name="department">
+                            <option value="">-- Select Department --</option>
+                            <option value="cse">Computer Science and Engineering</option>
+                            <option value="eee">Electrical and Electronic Engineering</option>
+                            <option value="bba">Business Administration</option>
+                            <option value="english">English</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <p id="deptError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester">Current Semester (1 - 12):</label>
+                        <input type="number" id="semester" name="semester" min="1" max="12" placeholder="Enter semester (1 to 12)">
+                        <p id="semesterError" class="error"></p>
+                    </div>
+                </fieldset>
+
+                <!-- Club Application Information -->
+                <fieldset class="form-fieldset">
+                    <legend>Club Executive Application</legend>
+
+                    <div class="form-group">
+                        <label for="club">Applying For Club:</label>
+                        <select id="club" name="club">
+                            <option value="">-- Choose Your Club --</option>
+                            <option value="programming">Programming Club</option>
+                            <option value="robotics">Robotics Club</option>
+                            <option value="photography">Photography Club</option>
+                            <option value="debating">Debating Society</option>
+                        </select>
+                        <p id="clubError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentRole">Current Position in Club:</label>
+                        <select id="currentRole" name="currentRole">
+                            <option value="">-- Select Current Position --</option>
+                            <option value="member">General Member</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="executive">Executive</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <p id="roleError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="applyingRole">Applying For Executive Position:</label>
+                        <select id="applyingRole" name="applyingRole">
+                            <option value="">-- Select Target Executive Role --</option>
+                            <option value="president">President</option>
+                            <option value="vice-president">Vice President</option>
+                            <option value="secretary">General Secretary</option>
+                            <option value="treasurer">Treasurer</option>
+                            <option value="executive">Executive Member</option>
+                        </select>
+                        <p id="applyingRoleError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="statement">Application Statement (Why you want to be executive):</label>
+                        <textarea id="statement" name="statement" rows="4" placeholder="Write a brief statement about your vision and motivation..."></textarea>
+                        <p id="statementError" class="error"></p>
+                    </div>
+                </fieldset>
+
+                <!-- Account Credentials -->
+                <fieldset class="form-fieldset">
+                    <legend>Account Credentials</legend>
+
+                    <div class="form-group">
+                        <label for="password">Create Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                        <p id="passError" class="error"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password">
+                        <p id="confirmPassError" class="error"></p>
+                    </div>
+                </fieldset>
+
+                <!-- Confirmation -->
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="terms" name="terms" value="yes">
+                        <label for="terms">I confirm that I am an authorized club member applying for executive office.</label>
+                    </div>
+                    <p id="termsError" class="error" style="clear: both;"></p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <input type="submit" value="Register Account" class="btn-primary">
+                    <input type="reset" value="Clear Form" class="btn-secondary">
+                </div>
+
+            </form>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>
+                    Already have an account?
+                    <a href="login.html">Sign In</a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
