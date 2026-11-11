@@ -1,1 +1,137 @@
-<!-- Student Affairs dashboard: summarizes university-wide club administration work. -->
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Treasurer Dashboard</title>
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+
+	<body>
+		<div class="treasurer-login-header">
+			<h1>Club<span style="color: #db2777">Kit</span></h1>
+			<h3>Treasurer Dashboard</h3>
+		</div>
+
+		<div class="topnav">
+			<a href="./dashboard.html" class="active">Home</a>
+			<a href="./budget.html">Budget</a>
+			<a href="./transactions.html">Transactions</a>
+			<a href="./reports.html">Reports</a>
+			<a href="./login.html">Logout</a>
+		</div>
+
+		<div class="dashboard-welcome">
+			<h2>Welcome, XYZ!</h2>
+			<p>Programming Club | Treasurer</p>
+		</div>
+
+		<!-- Financial Summary -->
+		<h3 class="dashboard-heading">Financial Summary</h3>
+
+		<div class="dashboard-summary">
+			<div class="summary-box">
+				<h4>Total Budget</h4>
+				<p>৳ 50,000</p>
+			</div>
+
+			<div class="summary-box">
+				<h4>Total Expenses</h4>
+				<p>৳ 18,500</p>
+			</div>
+
+			<div class="summary-box">
+				<h4>Remaining Balance</h4>
+				<p>৳ 31,500</p>
+			</div>
+
+			<div class="summary-box">
+				<h4>Pending Requests</h4>
+				<p>3</p>
+			</div>
+		</div>
+
+		<!-- Quick Links -->
+		<h3 class="dashboard-heading">Quick Actions</h3>
+
+		<div class="dashboard-actions">
+			<a href="./budget.html">Manage Budget</a>
+			<a href="./transactions.html">Record Transaction</a>
+			<a href="./reports.html">Submit Financial Report</a>
+		</div>
+
+		<!-- Recent Transactions -->
+		<fieldset class="dashboard-fieldset">
+			<legend>Recent Transactions</legend>
+
+			<table>
+				<tr>
+					<th>Date</th>
+					<th>Description</th>
+					<th>Type</th>
+					<th>Amount</th>
+				</tr>
+
+				<tr>
+					<td>08-11-2026</td>
+					<td>Event Decoration</td>
+					<td>Expense</td>
+					<td>৳ 5,000</td>
+				</tr>
+
+				<tr>
+					<td>05-11-2026</td>
+					<td>Membership Collection</td>
+					<td>Income</td>
+					<td>৳ 8,000</td>
+				</tr>
+
+				<tr>
+					<td>02-11-2026</td>
+					<td>Workshop Materials</td>
+					<td>Expense</td>
+					<td>৳ 3,500</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<br />
+
+		<!-- Upcoming Tasks -->
+		<fieldset class="dashboard-fieldset">
+			<legend>Pending Financial Tasks</legend>
+
+			<table>
+				<tr>
+					<th>Task</th>
+					<th>Related Activity</th>
+					<th>Status</th>
+				</tr>
+
+				<tr>
+					<td>Approve Expense Request</td>
+					<td>Programming Workshop</td>
+					<td>Pending</td>
+				</tr>
+
+				<tr>
+					<td>Prepare Financial Report</td>
+					<td>Monthly Report</td>
+					<td>Due Soon</td>
+				</tr>
+
+				<tr>
+					<td>Review Budget</td>
+					<td>Annual Club Activities</td>
+					<td>Pending</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<div class="footer">
+			<p>
+				&copy; 2026 ClubKit. Connecting Students Through Clubs &
+				Activities. All Rights Reserved.
+			</p>
+		</div>
+	</body>
+</html>
