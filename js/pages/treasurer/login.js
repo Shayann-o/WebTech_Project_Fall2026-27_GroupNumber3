@@ -14,6 +14,8 @@ function collect_login_data() {
 			message.innerHTML = "Login successful! Welcome to the Treasurer Portal.";
 
 			console.log("Treasurer Login Successful");
+
+			window.location.href = "./dashboard.html";
 		} else {
 			message.style.color = "red";
 			message.innerHTML = "Incorrect email or password.";

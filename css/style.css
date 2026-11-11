@@ -446,3 +446,248 @@ input[readonly] {
 #reg-reset:hover {
 	background-color: #475569;
 }
+
+/* ------------------------Treasurer Dashboard------------------------- */
+
+.dashboard-welcome {
+	background-color: #ffffff;
+	border: 1px solid #dce4ee;
+	border-left: 5px solid #db2777;
+	border-radius: 8px;
+	padding: 15px 20px;
+	margin: 20px 10px;
+}
+
+.dashboard-welcome h2 {
+	color: #142b4a;
+	margin: 5px 0;
+}
+
+.dashboard-welcome p {
+	color: #64748b;
+	margin: 6px 0;
+}
+
+.dashboard-heading {
+	color: #142b4a;
+	margin: 25px 15px 12px;
+}
+
+.dashboard-summary,
+.budget-summary {
+	display: flex;
+	gap: 12px;
+	margin: 10px;
+}
+
+.summary-box {
+	flex: 1;
+	background-color: white;
+	border: 1px solid #f0b4d0;
+	border-top: 4px solid #db2777;
+	border-radius: 8px;
+	padding: 12px;
+	text-align: center;
+}
+
+.summary-box h4 {
+	color: #64748b;
+	margin: 5px;
+}
+
+.summary-box p {
+	color: #be185d;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.dashboard-actions {
+	margin: 10px;
+	text-align: center;
+}
+
+.dashboard-actions a {
+	display: inline-block;
+	background-color: #be185d;
+	color: white;
+	padding: 10px 15px;
+	margin: 5px;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+.dashboard-actions a:hover {
+	background-color: #9d174d;
+}
+
+.dashboard-fieldset {
+	border: 2px solid #db2777;
+	border-radius: 8px;
+	margin: 15px 10px;
+	padding: 15px;
+}
+
+.dashboard-fieldset legend {
+	background-color: #be185d;
+	color: white;
+	border: 1px solid #be185d;
+	padding: 5px 12px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.dashboard-fieldset table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.dashboard-fieldset th {
+	background-color: #fce7f3;
+	color: #831843;
+	padding: 10px;
+}
+
+.dashboard-fieldset td {
+	padding: 10px;
+	border-bottom: 1px solid #f0d3e1;
+	text-align: center;
+}
+
+/* ------------------------Treasurer Budget------------------------- */
+
+.budget-heading {
+	color: #142b4a;
+	margin: 25px 15px 20px;
+}
+
+.budget-summary .summary-box {
+	flex: 1;
+	background-color: white;
+	border: 1px solid #c4b5fd;
+	border-top: 4px solid #7c3aed;
+	border-radius: 8px;
+	padding: 12px;
+	text-align: center;
+}
+
+.budget-summary .summary-box h4 {
+	color: #64748b;
+	margin: 5px;
+}
+
+.budget-summary .summary-box p {
+	color: #7c3aed;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.budget-fieldset {
+	border: 2px solid #7c3aed;
+	border-radius: 8px;
+	margin: 25px 10px;
+	padding: 15px;
+}
+
+.budget-fieldset legend {
+	background-color: #6d28d9;
+	color: white;
+	border: 1px solid #6d28d9;
+	padding: 5px 12px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.budget-fieldset input[type="number"],
+.budget-fieldset select,
+.budget-fieldset textarea {
+	width: 100%;
+	padding: 11px;
+	font-size: 15px;
+	border: 1px solid #c4b5fd;
+	border-radius: 6px;
+	background-color: #f5f3ff;
+	outline: none;
+}
+
+.budget-fieldset input[type="number"]:focus,
+.budget-fieldset select:focus,
+.budget-fieldset textarea:focus {
+	border: 2px solid #7c3aed;
+	background-color: white;
+}
+
+.budget-fieldset textarea {
+	font-family: Arial, sans-serif;
+	resize: vertical;
+}
+
+.budget-fieldset table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.budget-table th {
+	background-color: #ede9fe;
+	color: #4c1d95;
+	padding: 10px;
+}
+
+.budget-table td {
+	padding: 10px;
+	border-bottom: 1px solid #ddd6fe;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.input-table td {
+	padding: 10px;
+}
+
+#BudgetError,
+#PeriodError,
+#CategoryError,
+#AmountError {
+	color: #d62828;
+	text-align: left;
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+#BudgetMessage,
+#AllocationMessage {
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.treasurer-submit {
+	background-color: #6d28d9;
+	color: white;
+	padding: 10px 22px;
+	border: none;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.treasurer-submit:hover {
+	background-color: #5b21b6;
+}
+
+.treasurer-reset {
+	background-color: #64748b;
+	color: white;
+	padding: 10px 22px;
+	border: none;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.treasurer-reset:hover {
+	background-color: #475569;
+}

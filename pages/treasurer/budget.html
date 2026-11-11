@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Budget Management</title>
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script src="../../js/pages/treasurer/budget.js"></script>
+	</head>
+
+	<body>
+		<div class="treasurer-login-header">
+			<h1>Club<span style="color: #db2777">Kit</span></h1>
+			<h3>Budget Management</h3>
+		</div>
+
+		<div class="topnav">
+			<a href="./dashboard.html">Home</a>
+			<a href="./budget.html" class="active">Budget</a>
+			<a href="./transactions.html">Transactions</a>
+			<a href="./reports.html">Reports</a>
+			<a href="./login.html">Logout</a>
+		</div>
+
+		<!-- Current Budget -->
+		<h3 class="budget-heading">Current Budget Overview</h3>
+
+		<div class="budget-summary">
+			<div class="summary-box">
+				<h4>Total Budget</h4>
+				<p>৳ 50,000</p>
+			</div>
+
+			<div class="summary-box">
+				<h4>Allocated Funds</h4>
+				<p>৳ 30,000</p>
+			</div>
+
+			<div class="summary-box">
+				<h4>Unallocated Funds</h4>
+				<p>৳ 20,000</p>
+			</div>
+		</div>
+
+		<!-- Existing Allocations -->
+		<fieldset class="budget-fieldset">
+			<legend>Existing Budget Allocations</legend>
+
+			<table class="budget-table">
+				<tr>
+					<th>Category</th>
+					<th>Description</th>
+					<th>Allocated Amount</th>
+				</tr>
+
+				<tr>
+					<td>Events</td>
+					<td>Club annual event</td>
+					<td>৳ 15,000</td>
+				</tr>
+
+				<tr>
+					<td>Workshops</td>
+					<td>Technical workshops</td>
+					<td>৳ 8,000</td>
+				</tr>
+
+				<tr>
+					<td>Equipment</td>
+					<td>Club equipment</td>
+					<td>৳ 5,000</td>
+				</tr>
+
+				<tr>
+					<td>Marketing</td>
+					<td>Promotional materials</td>
+					<td>৳ 2,000</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<!-- Set Budget -->
+		<h3 class="budget-heading">Set Club Budget</h3>
+
+		<form onsubmit="return save_budget();">
+			<fieldset class="budget-fieldset">
+				<legend>Budget Information</legend>
+
+				<table class="input-table">
+					<tr>
+						<td>
+							<label for="TotalBudget">Total Budget:</label>
+						</td>
+
+						<td>
+							<input
+								type="number"
+								id="TotalBudget"
+								placeholder="Enter total budget"
+								min="1"
+							/>
+							<p id="BudgetError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="BudgetPeriod">Budget Period:</label>
+						</td>
+
+						<td>
+							<select id="BudgetPeriod">
+								<option value="">Select period</option>
+								<option value="Monthly">Monthly</option>
+								<option value="Semester">Semester</option>
+								<option value="Annual">Annual</option>
+							</select>
+							<p id="PeriodError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="BudgetDescription">
+								Description:
+							</label>
+						</td>
+
+						<td>
+							<textarea
+								id="BudgetDescription"
+								rows="4"
+								placeholder="Describe the budget..."
+							></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<br />
+
+			<input
+				type="submit"
+				id="submit"
+				class="treasurer-submit"
+				value="Save Budget"
+			/>
+
+			<input
+				type="reset"
+				id="reset"
+				class="treasurer-reset"
+				value="Clear"
+			/>
+		</form>
+
+		<!-- Allocate Budget -->
+		<h3 class="budget-heading">Allocate Funds</h3>
+
+		<form onsubmit="return allocate_budget();">
+			<fieldset class="budget-fieldset">
+				<legend>Fund Allocation</legend>
+
+				<table class="input-table">
+					<tr>
+						<td>
+							<label for="AllocationCategory"> Category: </label>
+						</td>
+
+						<td>
+							<select id="AllocationCategory">
+								<option value="">Select category</option>
+								<option value="Events">Events</option>
+								<option value="Workshops">Workshops</option>
+								<option value="Equipment">Equipment</option>
+								<option value="Marketing">Marketing</option>
+								<option value="Other">Other</option>
+							</select>
+							<p id="CategoryError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="AllocationAmount"> Amount: </label>
+						</td>
+
+						<td>
+							<input
+								type="number"
+								id="AllocationAmount"
+								placeholder="Enter amount"
+								min="1"
+							/>
+							<p id="AmountError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="AllocationDescription">
+								Description:
+							</label>
+						</td>
+
+						<td>
+							<textarea
+								id="AllocationDescription"
+								rows="3"
+								placeholder="Explain the allocation..."
+							></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<br />
+
+			<input
+				type="submit"
+				id="submit"
+				class="treasurer-submit"
+				value="Allocate Funds"
+			/>
+
+			<input
+				type="reset"
+				id="reset"
+				class="treasurer-reset"
+				value="Clear"
+			/>
+		</form>
+
+		<div class="footer">
+			<p>
+				&copy; 2026 ClubKit. Connecting Students Through Clubs &
+				Activities. All Rights Reserved.
+			</p>
+		</div>
+	</body>
+</html>
