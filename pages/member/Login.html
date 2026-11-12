@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title> Patient Registration Form </title>
+</head>
+<body>
+<h1> Patient Registration Form </h1>
+<form>
+    <fieldset>
+        <legend>
+            Patient Personal Information
+        </legend>
+    </fieldset>
+</form>
+
+<table>
+    <tr>
+        <td> <label for="PatientName"> Patient Name: </label></td>
+        <td> <input type="text" id="PatientName" for="PatientName" placeholder="Enter Your Name" required> </td>
+    </tr>
+
+    <tr>
+        <td> <label for="PatientAge"> Patient Age: </label></td>
+        <td> <input type="number" id="PatientAge" for="PatientAge" placeholder="Enter Your Age" required> </td>
+    </tr>
+
+    <tr>
+        <td> <label for="PatientGender"> Patient Gender:</label></td>
+        <td> <input type="radio" id="Male" name="PatientGender" value="Male"> <label for="Male">Male</label>
+             <input type="radio" id="Female" name="PatientGender" value="Female"> <label for="Female">Female</label> </td>
+    </tr>
+
+    <tr>
+        <td> <label for="Address"> Address : </label></td>
+        <td><textarea placeholder="Enter Your Address" rows="5" cols="50" style="resize:none"></textarea></td>
+    </tr>
+
+    <tr>
+        <td><label for="Citizenship"> Citizenship: </label></td>
+        <option>
+            <option> id = "Bangladesh" </option>
+            <option> id = "USA" </option>
+            <option> id = "Canada" </option>
+            <option> id = "India" </option>
+            <option> id = "Pakistan" </option>
+            <option> id = "Germany" </option>
+        </option>
+    </tr>
+
+</table>
+</body>
+
+</html>
