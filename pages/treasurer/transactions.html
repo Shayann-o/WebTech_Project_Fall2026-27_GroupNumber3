@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Treasurer - Transactions</title>
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script src="../../js/pages/treasurer/transactions.js"></script>
+	</head>
+	<body>
+		<div class="treasurer-login-header">
+			<h1>Club<span style="color: #db2777">Kit</span></h1>
+			<h3>Transaction Management</h3>
+		</div>
+
+		<div class="topnav">
+			<a href="./dashboard.html">Home</a>
+			<a href="./budget.html">Budget</a>
+			<a href="./transactions.html" class="active">Transactions</a>
+			<a href="./reports.html">Reports</a>
+			<a href="./login.html">Logout</a>
+		</div>
+
+		<h3 class="dashboard-heading">Record New Transaction</h3>
+
+		<form onsubmit="return record_transaction();">
+			<fieldset class="transaction-fieldset">
+				<legend>Transaction Information</legend>
+
+				<table class="input-table">
+					<tr>
+						<td>
+							<label for="TransactionType"
+								>Transaction Type:</label
+							>
+						</td>
+						<td>
+							<select id="TransactionType">
+								<option value="">
+									Select Transaction Type
+								</option>
+								<option value="Income">Income</option>
+								<option value="Expense">Expense</option>
+							</select>
+							<p id="TransactionTypeError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="TransactionCategory">Category:</label>
+						</td>
+						<td>
+							<select id="TransactionCategory">
+								<option value="">Select Category</option>
+								<option value="Membership Fee">
+									Membership Fee
+								</option>
+								<option value="Event Registration">
+									Event Registration
+								</option>
+								<option value="Sponsorship">Sponsorship</option>
+								<option value="Donation">Donation</option>
+								<option value="Event Expenses">
+									Event Expenses
+								</option>
+								<option value="Equipment">Equipment</option>
+								<option value="Transportation">
+									Transportation
+								</option>
+								<option value="Other">Other</option>
+							</select>
+							<p id="TransactionCategoryError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="TransactionAmount">Amount (৳):</label>
+						</td>
+						<td>
+							<input
+								type="number"
+								id="TransactionAmount"
+								min="1"
+								step="0.01"
+								placeholder="Enter transaction amount"
+							/>
+							<p id="TransactionAmountError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="TransactionDate"
+								>Transaction Date:</label
+							>
+						</td>
+						<td>
+							<input type="date" id="TransactionDate" />
+							<p id="TransactionDateError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="TransactionDescription"
+								>Description:</label
+							>
+						</td>
+						<td>
+							<textarea
+								id="TransactionDescription"
+								rows="3"
+								placeholder="Enter transaction details"
+							></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="TransactionReference"
+								>Reference / Receipt No.:</label
+							>
+						</td>
+						<td>
+							<input
+								type="text"
+								id="TransactionReference"
+								placeholder="Enter reference number (optional)"
+							/>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<button type="submit" class="transaction-submit">
+				Record Transaction
+			</button>
+			<button type="reset" class="treasurer-reset">Reset</button>
+		</form>
+
+		<h3 class="dashboard-heading">Transaction History</h3>
+
+		<fieldset class="transaction-fieldset">
+			<legend>Recent Transactions</legend>
+
+			<table class="data-table">
+				<tr>
+					<th>Date</th>
+					<th>Description</th>
+					<th>Type</th>
+					<th>Amount</th>
+				</tr>
+
+				<tr>
+					<td>08-11-2026</td>
+					<td>Event Decoration</td>
+					<td>Expense</td>
+					<td>৳ 5,000</td>
+				</tr>
+
+				<tr>
+					<td>05-11-2026</td>
+					<td>Membership Collection</td>
+					<td>Income</td>
+					<td>৳ 8,000</td>
+				</tr>
+
+				<tr>
+					<td>02-11-2026</td>
+					<td>Workshop Materials</td>
+					<td>Expense</td>
+					<td>৳ 3,500</td>
+				</tr>
+
+				<tr>
+					<td>30-10-2026</td>
+					<td>Event Sponsorship</td>
+					<td>Income</td>
+					<td>৳ 12,000</td>
+				</tr>
+
+				<tr>
+					<td>27-10-2026</td>
+					<td>Transportation</td>
+					<td>Expense</td>
+					<td>৳ 2,000</td>
+				</tr>
+
+				<tr>
+					<td>24-10-2026</td>
+					<td>New Member Registration</td>
+					<td>Income</td>
+					<td>৳ 4,000</td>
+				</tr>
+			</table>
+
+			<div class="transaction-view-all">
+				<a href="./transactions.html">View All Transactions →</a>
+			</div>
+		</fieldset>
+
+		<div class="footer">
+			<p>
+				&copy; 2026 ClubKit. Connecting Students Through Clubs &
+				Activities. All Rights Reserved.
+			</p>
+		</div>
+	</body>
+</html>

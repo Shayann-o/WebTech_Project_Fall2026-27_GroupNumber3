@@ -691,3 +691,220 @@ input[readonly] {
 .treasurer-reset:hover {
 	background-color: #475569;
 }
+
+/* ------------------------Treasurer Transactions------------------------- */
+
+.transaction-fieldset {
+	border: 2px solid #2563eb;
+	border-radius: 8px;
+	margin: 25px 10px;
+	padding: 15px;
+}
+
+.transaction-fieldset legend {
+	background-color: #2563eb;
+	color: white;
+	border: 1px solid #2563eb;
+	padding: 5px 12px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.transaction-fieldset input[type="text"],
+.transaction-fieldset input[type="number"],
+.transaction-fieldset input[type="date"],
+.transaction-fieldset select,
+.transaction-fieldset textarea {
+	width: 100%;
+	padding: 11px;
+	font-size: 15px;
+	border: 1px solid #93c5fd;
+	border-radius: 6px;
+	background-color: #f5f3ff;
+	outline: none;
+}
+
+.transaction-fieldset input:focus,
+.transaction-fieldset select:focus,
+.transaction-fieldset textarea:focus {
+	border: 2px solid #2563eb;
+	background-color: white;
+}
+
+.transaction-fieldset textarea {
+	font-family: Arial, sans-serif;
+	resize: vertical;
+}
+
+.transaction-fieldset table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.transaction-fieldset th {
+	background-color: #ede9fe;
+	color: #1d4ed8;
+	padding: 10px;
+	text-align: center;
+}
+
+.data-table td {
+	padding: 10px;
+	border-bottom: 1px solid #ddd6fe;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.input-table td {
+	padding: 10px;
+}
+
+#TransactionTypeError,
+#TransactionCategoryError,
+#TransactionAmountError,
+#TransactionDateError {
+	color: #d62828;
+	text-align: left;
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.transaction-submit {
+	background-color: #2563eb;
+	color: white;
+	padding: 10px 22px;
+	border: none;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.treasurer-submit:hover {
+	background-color: #1d4ed8;
+}
+
+#TransactionMessage {
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.transaction-view-all {
+	text-align: right;
+	margin-top: 15px;
+}
+
+.transaction-view-all a {
+	color: #2563eb;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.transaction-view-all a:hover {
+	color: #1d4ed8;
+	text-decoration: underline;
+}
+
+/* ------------------------Treasurer Reports------------------------- */
+
+.reports-fieldset {
+	border: 2px solid #4f46e5;
+	border-radius: 8px;
+	margin: 25px 10px;
+	padding: 15px;
+}
+
+.reports-fieldset legend {
+	background-color: #4338ca;
+	color: white;
+	border: 1px solid #4338ca;
+	padding: 5px 12px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.reports-fieldset input[type="text"],
+.reports-fieldset input[type="date"],
+.reports-fieldset select,
+.reports-fieldset textarea {
+	width: 100%;
+	padding: 11px;
+	font-size: 15px;
+	border: 1px solid #c7d2fe;
+	border-radius: 6px;
+	background-color: #eef2ff;
+	outline: none;
+}
+
+.reports-fieldset input:focus,
+.reports-fieldset select:focus,
+.reports-fieldset textarea:focus {
+	border: 2px solid #4f46e5;
+	background-color: white;
+}
+
+.reports-fieldset textarea {
+	font-family: Arial, sans-serif;
+	resize: vertical;
+}
+
+.reports-fieldset .input-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.reports-fieldset .input-table td {
+	padding: 10px;
+}
+
+.report-options {
+	margin: 15px 10px;
+}
+
+.report-options label {
+	display: block;
+	margin: 12px 0;
+	color: #334155;
+}
+
+.report-options input[type="checkbox"] {
+	margin-right: 8px;
+	accent-color: #4f46e5;
+}
+
+#ReportTitleError,
+#ReportTypeError,
+#ReportPeriodError,
+#StartDateError,
+#EndDateError,
+#ReportDetailsError,
+#ReportFormatError,
+#ReportRecipientError,
+#ReportPriorityError {
+	color: #d62828;
+	text-align: left;
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+#ReportMessage {
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.reports-submit {
+	background-color: #4f46e5;
+	color: white;
+	padding: 10px 22px;
+	border: none;
+	border-radius: 6px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.reports-submit:hover {
+	background-color: #4338ca;
+}

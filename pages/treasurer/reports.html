@@ -1,1 +1,252 @@
-<!-- Student Affairs reports page: presents university-level club administration reports. -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Treasurer - Reports</title>
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script src="../../js/pages/treasurer/reports.js"></script>
+	</head>
+	<body>
+		<div class="treasurer-login-header">
+			<h1>Club<span style="color: #db2777">Kit</span></h1>
+			<h3>Financial Report Management</h3>
+		</div>
+
+		<div class="topnav">
+			<a href="./dashboard.html">Home</a>
+			<a href="./budget.html">Budget</a>
+			<a href="./transactions.html">Transactions</a>
+			<a href="./reports.html" class="active">Reports</a>
+			<a href="./login.html">Logout</a>
+		</div>
+
+		<h3 class="dashboard-heading">Generate Financial Report</h3>
+
+		<form onsubmit="return generate_report();">
+			<fieldset class="reports-fieldset">
+				<legend>Report Information</legend>
+
+				<table class="input-table">
+					<tr>
+						<td>
+							<label for="ReportTitle">Report Title:</label>
+						</td>
+						<td>
+							<input
+								type="text"
+								id="ReportTitle"
+								placeholder="Enter report title"
+							/>
+							<p id="ReportTitleError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ReportType">Report Type:</label>
+						</td>
+						<td>
+							<select id="ReportType">
+								<option value="">Select Report Type</option>
+								<option value="Complete Financial Report">
+									Complete Financial Report
+								</option>
+								<option value="Income Report">
+									Income Report
+								</option>
+								<option value="Expense Report">
+									Expense Report
+								</option>
+								<option value="Budget Utilization Report">
+									Budget Utilization Report
+								</option>
+								<option value="Event Financial Report">
+									Event Financial Report
+								</option>
+							</select>
+							<p id="ReportTypeError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ReportPeriod">Reporting Period:</label>
+						</td>
+						<td>
+							<select id="ReportPeriod">
+								<option value="">
+									Select Reporting Period
+								</option>
+								<option value="Monthly">Monthly</option>
+								<option value="Semester">Semester</option>
+								<option value="Annual">Annual</option>
+								<option value="Custom">
+									Custom Date Range
+								</option>
+							</select>
+							<p id="ReportPeriodError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="StartDate">Start Date:</label>
+						</td>
+						<td>
+							<input type="date" id="StartDate" />
+							<p id="StartDateError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="EndDate">End Date:</label>
+						</td>
+						<td>
+							<input type="date" id="EndDate" />
+							<p id="EndDateError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ReportDescription">Purpose:</label>
+						</td>
+						<td>
+							<textarea
+								id="ReportDescription"
+								rows="3"
+								placeholder="Describe the purpose of this report"
+							></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<fieldset class="reports-fieldset">
+				<legend>Report Details</legend>
+
+				<p>Select the information you want to include:</p>
+
+				<div class="report-options">
+					<label>
+						<input type="checkbox" id="IncludeIncome" checked />
+						Income Summary
+					</label>
+
+					<label>
+						<input type="checkbox" id="IncludeExpenses" checked />
+						Expense Summary
+					</label>
+
+					<label>
+						<input type="checkbox" id="IncludeBudget" checked />
+						Budget Utilization
+					</label>
+
+					<label>
+						<input type="checkbox" id="IncludeTransactions" />
+						Transaction History
+					</label>
+
+					<label>
+						<input type="checkbox" id="IncludeEvents" />
+						Event Expenses
+					</label>
+				</div>
+
+				<p id="ReportDetailsError"></p>
+
+				<table class="input-table">
+					<tr>
+						<td>
+							<label for="ReportFormat">Report Format:</label>
+						</td>
+						<td>
+							<select id="ReportFormat">
+								<option value="">Select Format</option>
+								<option value="PDF">PDF</option>
+								<option value="Excel">Excel Spreadsheet</option>
+							</select>
+							<p id="ReportFormatError"></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ReportRecipient">Prepared For:</label>
+						</td>
+						<td>
+							<select id="ReportRecipient">
+								<option value="">Select Recipient</option>
+								<option value="Club President">
+									Club President
+								</option>
+								<option value="University Administration">
+									University Administration
+								</option>
+								<option value="Club Committee">
+									Club Committee
+								</option>
+								<option value="Personal Record">
+									Personal Record
+								</option>
+							</select>
+							<p id="ReportRecipientError"></p>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<fieldset class="reports-fieldset">
+				<legend>Additional Information</legend>
+
+				<table class="input-table">
+					<tr>
+						<td>
+							<label for="ReportNotes">Additional Notes:</label>
+						</td>
+						<td>
+							<textarea
+								id="ReportNotes"
+								rows="4"
+								placeholder="Enter any additional instructions or notes"
+							></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="ReportPriority">Report Priority:</label>
+						</td>
+						<td>
+							<select id="ReportPriority">
+								<option value="">Select Priority</option>
+								<option value="Normal">Normal</option>
+								<option value="High">High</option>
+								<option value="Urgent">Urgent</option>
+							</select>
+							<p id="ReportPriorityError"></p>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<button type="submit" class="reports-submit">
+				Submit Report Request
+			</button>
+
+			<button type="reset" class="treasurer-reset">Reset</button>
+
+			<p id="ReportMessage"></p>
+		</form>
+
+		<div class="footer">
+			<p>
+				&copy; 2026 ClubKit. Connecting Students Through Clubs &
+				Activities. All Rights Reserved.
+			</p>
+		</div>
+	</body>
+</html>
