@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Assignment | ClubKit</title>
+
+    <link rel="stylesheet" href="../../css/event-Co/Estyle.css">
+    <script src="../../js/pages/event_coordinator/Escript.js"></script>
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>ClubKit</h2>
+                <p>Event Coordinator</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html">Create Club Events</a>
+                <a href="report.html">Submit Expense Reports</a>
+                <a href="update_schedule.html">Update Event Schedules</a>
+                <a href="volunteer_assignment.html" class="active">Assign Volunteers</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log Out</a>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+            <div class="dashboard-header">
+                <h1>Volunteer Assignment</h1>
+                <p>Assign available volunteers to your upcoming club events.</p>
+            </div>
+
+
+            <!-- ASSIGNMENT FORM -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Assignment Information</h2>
+                    <p>Provide the details to assign a volunteer.</p>
+                </div>
+
+                <form class="dashboard-form"
+                      onsubmit="return collect_volunteer_assignment_data()">
+
+                    <div class="form-group">
+
+                        <label for="assignment-event">Select Event</label>
+
+                        <select id="assignment-event" name="event">
+                            <option value="" disabled selected>Select an event</option>
+                            <option value="Web Development Workshop">Web Development Workshop</option>
+                            <option value="Programming Contest">Programming Contest</option>
+                            <option value="Tech Career Seminar">Tech Career Seminar</option>
+                        </select>
+
+                        <p id="AssignmentEventError" class="error-message"></p>
+
+
+                        <label for="assignment-volunteer">Select Volunteer</label>
+
+                        <select id="assignment-volunteer" name="volunteer">
+                            <option value="" disabled selected>Select a volunteer</option>
+                            <option value="Rahim Ahmed">Rahim Ahmed</option>
+                            <option value="Nusrat Jahan">Nusrat Jahan</option>
+                            <option value="Tanvir Hasan">Tanvir Hasan</option>
+                        </select>
+
+                        <p id="AssignmentVolunteerError" class="error-message"></p>
+
+
+                        <label for="assignment-date">Assignment Date</label>
+
+                        <input type="date" id="assignment-date" name="assignment_date">
+
+                        <p id="AssignmentDateError" class="error-message"></p>
+
+
+                        <label for="volunteer-task">Assigned Responsibility</label>
+
+                        <select id="volunteer-task" name="responsibility">
+                            <option value="" disabled selected>Select responsibility</option>
+                            <option value="Registration Desk">Registration Desk</option>
+                            <option value="Guest Assistance">Guest Assistance</option>
+                            <option value="Event Setup">Event Setup</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Crowd Management">Crowd Management</option>
+                        </select>
+
+                        <p id="AssignmentTaskError" class="error-message"></p>
+
+
+                        <label for="assignment-notes">Additional Instructions</label>
+
+                        <textarea id="assignment-notes"
+                                  name="notes"
+                                  rows="4"
+                                  placeholder="Enter additional instructions for the volunteer..."></textarea>
+
+                    </div>
+
+                    <button type="submit" class="dashboard-btn">
+                        Assign Volunteer
+                    </button>
+
+                    <p id="AssignmentMessage" class="assignment-message"></p>
+
+                </form>
+
+            </section>
+
+
+            <!-- AVAILABLE VOLUNTEERS -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Available Volunteers</h2>
+                    <p>View the volunteers currently available for assignment.</p>
+                </div>
+
+                <fieldset class="event-fieldset">
+
+                    <legend>Volunteer List</legend>
+
+                    <div class="volunteer-list">
+
+                        <div class="ongoing-event volunteer-card">
+
+                            <h3>Rahim Ahmed</h3>
+
+                            <p><strong>Student ID:</strong> 23-XXXXX-1</p>
+
+                            <p><strong>Skills:</strong> Event Management, Registration</p>
+
+                            <p><strong>Phone:</strong> 017XXXXXXXX</p>
+
+                            <span class="availability-status">Available</span>
+
+                        </div>
+
+
+                        <div class="ongoing-event volunteer-card">
+
+                            <h3>Nusrat Jahan</h3>
+
+                            <p><strong>Student ID:</strong> 23-XXXXX-2</p>
+
+                            <p><strong>Skills:</strong> Guest Assistance, Communication</p>
+
+                            <p><strong>Phone:</strong> 018XXXXXXXX</p>
+
+                            <span class="availability-status">Available</span>
+
+                        </div>
+
+
+                        <div class="ongoing-event volunteer-card">
+
+                            <h3>Tanvir Hasan</h3>
+
+                            <p><strong>Student ID:</strong> 23-XXXXX-3</p>
+
+                            <p><strong>Skills:</strong> Technical Support, Event Setup</p>
+
+                            <p><strong>Phone:</strong> 019XXXXXXXX</p>
+
+                            <span class="availability-status">Available</span>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

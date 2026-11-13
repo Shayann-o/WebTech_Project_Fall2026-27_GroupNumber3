@@ -327,3 +327,76 @@ body {
     background-color: #B45309;
 }
 
+
+
+/* ---------- Ongoing Events ---------- */
+
+.event-fieldset {
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0;
+}
+
+.event-fieldset legend {
+    color: #D97706;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.ongoing-event {
+    background-color: #FFFFFF;
+    border: 1px solid #FDE68A;
+    border-left: 4px solid #D97706;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.ongoing-event:last-child {
+    margin-bottom: 0;
+}
+
+.ongoing-event h3 {
+    color: #D97706;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.ongoing-event p {
+    color: #57534E;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.volunteer-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.volunteer-card {
+    margin-bottom: 0;
+}
+
+.volunteer-card h3 {
+    margin-bottom: 12px;
+}
+
+.volunteer-card p {
+    line-height: 1.5;
+}
+
+.availability-status {
+    display: inline-block;
+    background-color: #DCFCE7;
+    color: #15803D;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+
