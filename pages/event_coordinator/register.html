@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Coordinator Registration | ClubKit</title>
+    <script src="../../js/pages/event_coordinator/Escript.js"></script>
+    <link rel="stylesheet" href="../../css/event-Co/Estyle.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="logo">
+            <h2>ClubKit</h2>
+            <p>Event Coordinator Portal</p>
+        </div>
+
+        <div class="form-content">
+
+            <h2>Event Coordinator Registration</h2>
+            <p class="subtitle">Register to manage your club events.</p>
+
+            <form id="register-form" onsubmit="return collect_register_data()">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name">
+                        <p id="NameError" class="error-message"></p>
+                
+                    <label for="student-id">Student ID</label>
+                    <input
+                        type="text"
+                        id="student-id"
+                        name="student_id"
+                        placeholder="Enter your student ID exp. XX-XXXXX-X">
+                        <p id="StudentError" class="error-message"></p>
+                
+                    <label for="university-email">University Email</label>
+                    <input
+                        type="text"
+                        id="university-email"
+                        name="email"
+                        placeholder="Enter your university email">
+                        <p id="EmailError" class="error-message"></p>
+                
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                        <option value="" disabled selected>
+                            Select your department
+                        </option>
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="COE">COE</option>
+                        <option value="BBA">BBA</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <p id="DepartmentError" class="error-message"></p>
+                
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number">
+                        <p id="PhoneError" class="error-message"></p>
+                
+                    <label for="club-name">Club Name</label>
+                    <input
+                        type="text"
+                        id="club-name"
+                        name="club_name"
+                        placeholder="Enter your club name">
+                    <p id="ClubError" class="error-message"></p>    
+                
+                    <label for="position">Position / Designation</label>
+                    <input
+                        type="text"
+                        id="position"
+                        name="position"
+                        placeholder="e.g. Event Coordinator">
+                        <p id="PositionError" class="error-message"></p>
+                
+                    <label for="reg-password">Password</label>
+                    <input
+                        type="password"
+                        id="reg-password"
+                        name="password"
+                        placeholder="Create a password">
+                        <p id="PasswordError" class="error-message"></p>
+                
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm_password"
+                        placeholder="Confirm your password">
+                        <p id="ConfirmPasswordError" class="error-message"></p>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p class="switch-text">
+                Already have an account?
+                <a href="login.html">Sign in here</a>
+            </p>
+
+        </div>
+
+    </div>
+</body>
+</html>

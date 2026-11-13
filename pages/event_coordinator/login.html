@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Coordinator Login | ClubKit</title>
+    <script src="../../js/pages/event_coordinator/Escript.js"></script>
+    <link rel="stylesheet" href="../../css/event-Co/Estyle.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="logo">
+            <h2>ClubKit</h2>
+            <p>Event Coordinator Portal</p>
+        </div>
+
+        <div class="form-content">
+
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Sign in to manage your club events.</p>
+
+            <form id="login-form" onsubmit="return collect_login_data()">
+
+                <div class="form-group">
+                    <label for="login-email">University Email</label>
+                    <input
+                        type="text"
+                        id="login-email"
+                        name="email"
+                        placeholder="Enter your university email">
+                        <p id="EmailError" class="error-message"></p>
+                
+                    <label for="login-password">Password</label>
+                    <input
+                        type="password"
+                        id="login-password"
+                        name="password"
+                        placeholder="Enter your password">
+                        <p id="PasswordError" class="error-message"></p>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Sign In
+                </button>
+
+            </form>
+
+            <p class="switch-text">
+                Don't have an account?
+                <a href="register.html">Register here</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Event Schedule | ClubKit</title>
+    <script src="../../js/pages/event_coordinator/Escript.js"></script>
+    <link rel="stylesheet" href="../../css/event-Co/Estyle.css">
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>ClubKit</h2>
+                <p>Event Coordinator</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html">Create Club Events</a>
+                <a href="update_schedule.html" class="active">Update Event Schedules</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="login.html">Log Out</a>
+            </div>
+
+        </aside>
+
+        <main class="dashboard-main">
+
+            <div class="dashboard-header">
+                <h1>Update Event Schedules</h1>
+                <p>Modify the date, time, and venue of existing events.</p>
+            </div>
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Schedule Information</h2>
+                    <p>Provide the updated information for your event.</p>
+                </div>
+
+                <form id="schedule-form" class="dashboard-form" onsubmit="return collect_schedule_data()">
+
+                    <div class="form-group">
+                        <label for="schedule-event">Select Event</label>
+                        <select id="schedule-event" name="event">
+                            <option value="" disabled selected>Select an event</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Seminar">Seminar</option>
+                            <option value="Competition">Competition</option>
+                        </select>
+                        <p id="EventSelectionError" class="error-message"></p>
+                    
+
+                        
+                            <label for="new-date">New Event Date</label>
+                            <input type="date" id="new-date" name="new_date">
+                            <p id="NewDateError" class="error-message"></p>
+                       
+
+                        
+                            <label for="new-time">New Event Time</label>
+                            <input type="time" id="new-time" name="new_time">
+                            <p id="NewTimeError" class="error-message"></p>
+                        
+
+                    
+                        <label for="new-venue">New Venue</label>
+                        <input type="text" id="new-venue" name="new_venue"
+                               placeholder="Enter new venue">
+                        <p id="NewVenueError" class="error-message"></p>
+                    
+                        <label for="schedule-reason">Reason for Schedule Change</label>
+                        <textarea id="schedule-reason" name="reason"
+                                  rows="4"
+                                  placeholder="Explain why the schedule is changing..."></textarea>
+                        <p id="ReasonError" class="error-message"></p>
+                    </div>
+
+                    <button type="submit" class="dashboard-btn">
+                        Update Schedule
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
