@@ -1,54 +1,43 @@
+
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-    <meta charset = "UTF-8">
-    <title> Patient Registration Form </title>
+    <title>Club Member Login</title>
+    <link rel="stylesheet" href="../../css/member/member.css">
 </head>
 <body>
-<h1> Patient Registration Form </h1>
-<form>
-    <fieldset>
-        <legend>
-            Patient Personal Information
-        </legend>
-    </fieldset>
-</form>
 
-<table>
-    <tr>
-        <td> <label for="PatientName"> Patient Name: </label></td>
-        <td> <input type="text" id="PatientName" for="PatientName" placeholder="Enter Your Name" required> </td>
-    </tr>
+    <div class="login-container">
 
-    <tr>
-        <td> <label for="PatientAge"> Patient Age: </label></td>
-        <td> <input type="number" id="PatientAge" for="PatientAge" placeholder="Enter Your Age" required> </td>
-    </tr>
+        <div class="login-header">
+            <h1>Welcome Back!</h1>
+            <p>Login to your Club Member Account</p>
+        </div>
 
-    <tr>
-        <td> <label for="PatientGender"> Patient Gender:</label></td>
-        <td> <input type="radio" id="Male" name="PatientGender" value="Male"> <label for="Male">Male</label>
-             <input type="radio" id="Female" name="PatientGender" value="Female"> <label for="Female">Female</label> </td>
-    </tr>
+        <form>
+            <label for="login-email">University Email</label>
+            <input
+                type="text"
+                id="login-email"
+                placeholder="Enter your university email">
+            <p id="EmailError" class="error-message"></p>
 
-    <tr>
-        <td> <label for="Address"> Address : </label></td>
-        <td><textarea placeholder="Enter Your Address" rows="5" cols="50" style="resize:none"></textarea></td>
-    </tr>
+            <label for="login-password">Password</label>
+            <input
+                type="password"
+                id="login-password"
+                placeholder="Enter your password">
+            <p id="PasswordError" class="error-message"></p>
 
-    <tr>
-        <td><label for="Citizenship"> Citizenship: </label></td>
-        <option>
-            <option> id = "Bangladesh" </option>
-            <option> id = "USA" </option>
-            <option> id = "Canada" </option>
-            <option> id = "India" </option>
-            <option> id = "Pakistan" </option>
-            <option> id = "Germany" </option>
-        </option>
-    </tr>
+            <button type="submit">Login</button>
+        </form>
 
-</table>
+        <p class="bottom-text">
+            Don't have an account?
+            <a href="registration_page.html">Register Here</a>
+        </p>
+
+    </div>
+
 </body>
-
 </html>

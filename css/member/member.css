@@ -1,0 +1,250 @@
+
+* {
+   
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eefafa;
+    padding: 40px 20px;
+}
+
+/* Login Page */
+
+.login-container {
+    width: 400px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d5eeee;
+}
+
+.login-header {
+    background-color: #51d7e0;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.login-header h1 {
+    color: #123c40;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #24575b;
+}
+
+form {
+    padding: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #51d7e0;
+    color: #123c40;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #35c2cc;
+}
+
+.bottom-text {
+    text-align: center;
+    padding: 0 15px 25px;
+    color: #555;
+}
+
+a {
+    color: #159ba5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Registration Page */
+
+.register-container {
+    width: 750px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d5eeee;
+}
+
+.register-header {
+    background-color: #51d7e0;
+    padding: 25px;
+    text-align: center;
+}
+
+.register-header h1 {
+    color: #123c40;
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    color: #24575b;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+
+/* Dashboard Page */
+
+.dashboard-container {
+    width: 850px;
+    max-width: 95%;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d5eeee;
+}
+
+.dashboard-header {
+    background-color: #51d7e0;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.dashboard-header h1 {
+    color: #123c40;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #24575b;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.dashboard-card {
+    flex: 1 1 220px;
+    padding: 25px;
+    border: 1px solid #d5eeee;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f8ffff;
+}
+
+.dashboard-card h2 {
+    color: #123c40;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.dashboard-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #51d7e0;
+    color: #123c40;
+    border-radius: 5px;
+}
+
+.dashboard-card a:hover {
+    background-color: #35c2cc;
+    text-decoration: none;
+}
+
+.dashboard-footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #d5eeee;
+}
+
+
+/* Club Information Section */
+
+.club-info {
+    padding: 15px;
+    background-color: #f1fafa;
+    border-radius: 5px;
+    line-height: 1.7;
+}
+
+.club-info h3 {
+    color: #159ba5;
+    margin-bottom: 10px;
+}
+
+.club-info p {
+    color: #444;
+    margin-bottom: 12px;
+}
+
+
+/* Terms and Conditions */
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.terms input {
+    margin-top: 4px;
+}
+
+.terms label {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
