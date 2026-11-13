@@ -8,6 +8,7 @@ function validate_login() {
     }
 
     alert("Login successful!");
+    window.location.href = "dashboard.html";
     return true;
 }
 
