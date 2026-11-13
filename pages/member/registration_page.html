@@ -3,8 +3,8 @@
 <html>
 <head>
     <title>Club Member Registration</title>
-        <link rel="stylesheet" href="../../css/member/member.css">
-
+    <link rel="stylesheet" href="../../css/member/member.css">
+    <script src="../../js/pages/member/registration.js"></script>
 </head>
 <body>
 
@@ -15,25 +15,21 @@
             <p>Fill in the information to become a club member</p>
         </div>
 
-        <form>
+        <form onsubmit="return collect_registration_data()">
 
             <div class="form-row">
 
                 <div class="form-group">
                     <label for="club-name">Club Name</label>
-                    <input
-                        type="text"
-                        id="club-name"
-                        placeholder="Enter club name">
+                    <input type="text" id="club-name"
+                           placeholder="Enter club name">
                     <p id="ClubNameError" class="error-message"></p>
                 </div>
 
                 <div class="form-group">
                     <label for="student-id">Student ID</label>
-                    <input
-                        type="text"
-                        id="student-id"
-                        placeholder="Enter student ID">
+                    <input type="text" id="student-id"
+                           placeholder="Enter student ID">
                     <p id="StudentIDError" class="error-message"></p>
                 </div>
 
@@ -43,19 +39,15 @@
 
                 <div class="form-group">
                     <label for="register-email">University Email</label>
-                    <input
-                        type="text"
-                        id="register-email"
-                        placeholder="Enter your university email">
+                    <input type="text" id="register-email"
+                           placeholder="Enter your university email">
                     <p id="RegisterEmailError" class="error-message"></p>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input
-                        type="text"
-                        id="phone"
-                        placeholder="Enter phone number">
+                    <input type="text" id="phone"
+                           placeholder="Enter phone number">
                     <p id="PhoneError" class="error-message"></p>
                 </div>
 
@@ -66,23 +58,20 @@
                 <div class="form-group">
                     <label for="department">Department</label>
                     <select id="department">
-                        <option>Select Department</option>
-                        <option>CSE</option>
-                        <option>EEE</option>
-                        <option>BBA</option>
-                        <option>English</option>
-                        <option>Other</option>
+                        <option value="">Select Department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="BBA">BBA</option>
+                        <option value="English">English</option>
+                        <option value="Other">Other</option>
                     </select>
                     <p id="DepartmentError" class="error-message"></p>
                 </div>
 
                 <div class="form-group">
                     <label for="semester">Semester</label>
-<input
-    type="text"
-    id="semester"
-    placeholder="Enter your semester">
-<p id="SemesterError" class="error-message"></p>
+                    <input type="text" id="semester"
+                           placeholder="Enter your semester">
                     <p id="SemesterError" class="error-message"></p>
                 </div>
 
@@ -90,18 +79,15 @@
 
             <div class="form-group">
                 <label for="interest">Areas of Interest</label>
-                <input
-                    type="text"
-                    id="interest"
-                    placeholder="Enter your areas of interest">
+                <input type="text" id="interest"
+                       placeholder="Enter your areas of interest">
                 <p id="InterestError" class="error-message"></p>
             </div>
 
             <div class="form-group">
                 <label for="reason">Reason for Joining</label>
-                <textarea
-                    id="reason"
-                    placeholder="Why do you want to join this club?"></textarea>
+                <textarea id="reason"
+                          placeholder="Why do you want to join this club?"></textarea>
                 <p id="ReasonError" class="error-message"></p>
             </div>
 
@@ -111,10 +97,11 @@
 
         <p class="bottom-text">
             Already have an account?
-            <a href="login.html">Login Here</a>
+            <a href="Login.html">Login Here</a>
         </p>
 
     </div>
+
 
 </body>
 </html>

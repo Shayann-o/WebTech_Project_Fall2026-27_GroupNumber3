@@ -134,6 +134,13 @@ a:hover {
     width: 100%;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #51d7e0;
+}
+
 
 /* Dashboard Page */
 
@@ -248,3 +255,60 @@ a:hover {
     line-height: 1.5;
 }
 
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.terms input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.terms label {
+    font-weight: normal;
+    font-size: 15px;
+    color: #444;
+    margin: 0;
+}
+
+.application-form {
+    border: 1px solid #d5eeee;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.Submit_button {
+    margin-bottom: 15px;
+}
+
+
+.club-days-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.club-days-options div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.club-days-options input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.club-days-options label {
+    margin: 0;
+    cursor: pointer;
+}

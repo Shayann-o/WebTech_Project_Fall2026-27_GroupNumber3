@@ -1,9 +1,12 @@
-<
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Upload Time Schedule</title>
+
     <link rel="stylesheet" href="../../css/member/member.css">
+
+    <script src="../../js/pages/member/update_schedule.js"></script>
 </head>
 
 <body>
@@ -15,15 +18,14 @@
             <p>Provide your class schedule and availability</p>
         </div>
 
-        <form action="#" method="post">
+        <form action="#" method="post" onsubmit="return collect_schedule_data()">
 
-            <fieldset>
+            <fieldset class="application-form">
                 <legend>Class Schedule Information</legend>
 
                 <label for="class-days">Alternate Class Days</label>
 
                 <select id="class-days" name="class-days">
-
                     <option value="">Select Class Days</option>
 
                     <option value="Saturday-Monday-Wednesday">
@@ -37,16 +39,13 @@
                     <option value="Friday-Saturday">
                         Friday - Saturday
                     </option>
-
                 </select>
 
-                <br>
-                <br>
+                <br><br>
 
                 <label for="class-time">Class Time</label>
 
                 <select id="class-time" name="class-time">
-
                     <option value="">Select Class Time</option>
 
                     <option value="8:00 AM - 9:30 AM">
@@ -72,24 +71,142 @@
                     <option value="4:45 PM - 6:15 PM">
                         4:45 PM - 6:15 PM
                     </option>
-
                 </select>
 
             </fieldset>
 
             <br>
 
-            <button type="submit">Upload Schedule</button>
+            <fieldset class="application-form">
+                <legend>Club Availability</legend>
+
+                <label>Available Club Days</label>
+
+                <div class="club-days-options">
+
+                    <div>
+                        <input type="checkbox" id="saturday"
+                        name="club-days[]" value="Saturday">
+                        <label for="saturday">Saturday</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="sunday"
+                        name="club-days[]" value="Sunday">
+                        <label for="sunday">Sunday</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="monday"
+                        name="club-days[]" value="Monday">
+                        <label for="monday">Monday</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="tuesday"
+                        name="club-days[]" value="Tuesday">
+                        <label for="tuesday">Tuesday</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="wednesday"
+                        name="club-days[]" value="Wednesday">
+                        <label for="wednesday">Wednesday</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="thursday"
+                        name="club-days[]" value="Thursday">
+                        <label for="thursday">Thursday</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="friday"
+                        name="club-days[]" value="Friday">
+                        <label for="friday">Friday</label>
+                    </div>
+
+                </div>
+
+                <br><br>
+
+                <label for="available-time">Available Time</label>
+
+                <select id="available-time" name="available-time">
+                    <option value="">Select Available Time</option>
+
+                    <option value="8:00 AM - 10:00 AM">
+                        8:00 AM - 10:00 AM
+                    </option>
+
+                    <option value="10:00 AM - 12:00 PM">
+                        10:00 AM - 12:00 PM
+                    </option>
+
+                    <option value="12:00 PM - 2:00 PM">
+                        12:00 PM - 2:00 PM
+                    </option>
+
+                    <option value="2:00 PM - 4:00 PM">
+                        2:00 PM - 4:00 PM
+                    </option>
+
+                    <option value="4:00 PM - 6:00 PM">
+                        4:00 PM - 6:00 PM
+                    </option>
+
+                    <option value="Flexible">
+                        Flexible / Any Time
+                    </option>
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset class="application-form">
+                <legend>Part-time Job Information</legend>
+
+                <label for="part-time-job">
+                    Do You Currently Have a Part-time Job?
+                </label>
+
+                <select id="part-time-job" name="part-time-job">
+
+                    <option value="">Select an Option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+
+                </select>
+
+                <br><br>
+
+                <label for="job-details">
+                    Job Details (If Any)
+                </label>
+
+                <textarea
+                    id="job-details"
+                    name="job-details"
+                    placeholder="Mention your job and working hours, if applicable"></textarea>
+
+            </fieldset>
+
+            <br>
+
+            <button type="submit" class="Submit_button">
+                Upload Schedule
+            </button>
+
             <button type="reset">Reset</button>
 
         </form>
 
         <p class="bottom-text">
-            <a href="dashboard.html">Back to Dashboard</a>
+            <a href="member_dashboard.html">Back to Dashboard</a>
         </p>
 
     </div>
 
 </body>
 </html>
-

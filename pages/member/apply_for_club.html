@@ -4,6 +4,7 @@
 <head>
     <title>Apply For Club</title>
     <link rel="stylesheet" href="../../css/member/member.css">
+    <script src="../../js/pages/member/apply_club.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
             <p>Choose your preferred club and submit your application</p>
         </div>
 
-        <form action="#" method="post">
+        <form action="#" method="post" onsubmit="return collect_application_data()">
 
             <fieldset>
                 <legend>Club Information</legend>
@@ -73,7 +74,7 @@
 
             <br>
 
-            <fieldset>
+            <fieldset class="application-form">
 
                 <legend>Informations Required to Apply in Club</legend>
 
@@ -91,13 +92,18 @@
                         <option value="Debate Club">Debate Club</option>
                     </select>
 
+                    <p id="ClubError" class="error-message"></p>
+
                 </div>
 
                 <div class="form-group">
 
                     <label for="skills">Skills / Areas of Interest</label>
 
-                    <input type="text" id="skills" for="skills" placeholder="Write about your skills and interests">
+                    <input type="text" id="skills" name="skills"
+                           placeholder="Write about your skills and interests">
+
+                    <p id="SkillsError" class="error-message"></p>
 
                 </div>
 
@@ -113,6 +119,8 @@
                         <option value="Team Leader">Team Leader</option>
                     </select>
 
+                    <p id="PositionError" class="error-message"></p>
+
                 </div>
 
                 <div class="form-group">
@@ -121,11 +129,11 @@
                         Are You a Member of Any Other Clubs?
                     </label>
 
-                    <textarea
-                        id="otherClubs"
-                        name="otherClubs"
-                        placeholder="Mention the club name(s), if applicable">
+                    <textarea id="otherClubs" name="otherClubs"
+                              placeholder="Mention the club name(s), or write No">
                     </textarea>
+
+                    <p id="OtherClubsError" class="error-message"></p>
 
                 </div>
 
@@ -133,10 +141,8 @@
 
                     <label for="experience">Previous Experience (If Any)</label>
 
-                    <textarea
-                        id="experience"
-                        name="experience"
-                        placeholder="Describe your previous experience, activities or achievements">
+                    <textarea id="experience" name="experience"
+                              placeholder="Describe your previous experience, activities or achievements">
                     </textarea>
 
                 </div>
@@ -146,12 +152,19 @@
             <br>
 
             <div class="terms">
+
                 <label for="terms">Terms & Conditions</label>
+
                 <input type="checkbox" id="terms" name="terms">
 
                 <label for="terms">
-                    I agree to follow the club rules and regulations and fulfill the responsibilities of my selected position. </label>
-             </div>
+                    I agree to follow the club rules and regulations
+                    and fulfill the responsibilities of my selected position.
+                </label>
+
+                <p id="TermsError" class="error-message"></p>
+
+            </div>
 
             <br>
 
@@ -164,6 +177,7 @@
         </p>
 
     </div>
+
 
 </body>
 </html>
