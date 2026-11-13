@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Expense Reports | ClubKit</title>
-
+		<script src="../../js/pages/event_coordinator/Escript.js"></script>
 		<link rel="stylesheet" href="../../css/event-Co/Estyle.css" />
 	</head>
 
@@ -41,7 +41,7 @@
 						<p>Provide the details of your event expenses.</p>
 					</div>
 
-					<form id="expense-form" class="dashboard-form">
+					<form id="expense-form" class="dashboard-form" onsubmit="return collect_expense_data()">
 						<div class="form-group">
 							<label for="expense-event">Select Event</label>
 							<select id="expense-event" name="event">
@@ -52,9 +52,8 @@
 								<option value="Seminar">Seminar</option>
 								<option value="Competition">Competition</option>
 							</select>
-						</div>
-
-						<div class="form-group">
+							<p id="EventSelectionError" class="error-message"></p>
+						
 							<label for="expense-category"
 								>Expense Category</label
 							>
@@ -73,10 +72,9 @@
 								<option value="Equipment">Equipment</option>
 								<option value="Other">Other</option>
 							</select>
-						</div>
-
-						<div class="form-row">
-							<div class="form-group">
+							<p id="ExpenseCategoryError" class="error-message"></p>
+						
+							
 								<label for="expense-amount"
 									>Expense Amount (৳)</label
 								>
@@ -86,19 +84,17 @@
 									name="amount"
 									placeholder="Enter amount"
 								/>
-							</div>
-
-							<div class="form-group">
+								<p id="ExpenseAmountError" class="error-message"></p>
+							
 								<label for="expense-date">Expense Date</label>
 								<input
 									type="date"
 									id="expense-date"
 									name="expense_date"
 								/>
-							</div>
-						</div>
+								<p id="ExpenseDateError" class="error-message"></p>
 
-						<div class="form-group">
+						
 							<label for="expense-description"
 								>Expense Description</label
 							>
@@ -108,9 +104,8 @@
 								rows="4"
 								placeholder="Explain the expense..."
 							></textarea>
-						</div>
-
-						<div class="form-group">
+							<p id="ExpenseDescriptionError" class="error-message"></p>
+						
 							<label for="receipt-reference"
 								>Receipt / Invoice Reference</label
 							>
@@ -120,6 +115,7 @@
 								name="receipt_reference"
 								placeholder="Enter receipt or invoice number"
 							/>
+							<p id="ReceiptReferenceError" class="error-message"></p>
 						</div>
 
 						<button type="submit" class="dashboard-btn">
