@@ -10,7 +10,6 @@ body {
     padding: 40px 20px;
 }
 
-/* Login Page */
 
 .login-container {
     width: 400px;
@@ -99,7 +98,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Registration Page */
 
 .register-container {
     width: 750px;
@@ -141,8 +139,6 @@ textarea:focus {
     border: 1px solid #51d7e0;
 }
 
-
-/* Dashboard Page */
 
 .dashboard-container {
     width: 850px;
@@ -216,9 +212,6 @@ textarea:focus {
     border-top: 1px solid #d5eeee;
 }
 
-
-/* Club Information Section */
-
 .club-info {
     padding: 15px;
     background-color: #f1fafa;
@@ -236,8 +229,6 @@ textarea:focus {
     margin-bottom: 12px;
 }
 
-
-/* Terms and Conditions */
 
 .terms {
     display: flex;
