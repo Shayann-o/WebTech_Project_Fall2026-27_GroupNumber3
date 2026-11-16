@@ -177,11 +177,11 @@ body {
 	margin: 0;
 }
 
-.sidebar-nav {
+.sidebar-div {
 	display: block;
 }
 
-.sidebar-nav a {
+.sidebar-div a {
 	display: block;
 	text-decoration: none;
 	color: #57534e;
@@ -191,8 +191,8 @@ body {
 	border-radius: 6px;
 	margin-bottom: 10px;
 }
-.sidebar-nav a:hover,
-.sidebar-nav a.active {
+.sidebar-div a:hover,
+.sidebar-div a.active {
 	background-color: #fef3c7;
 	color: #d97706;
 }
