@@ -64,6 +64,7 @@ textarea {
     color: red;
     font-size: 13px;
     margin-bottom: 15px;
+    
 }
 
 button {
@@ -302,4 +303,8 @@ textarea:focus {
 .club-days-options label {
     margin: 0;
     cursor: pointer;
+}
+
+#a-group{
+    margin-bottom: 20px;
 }
