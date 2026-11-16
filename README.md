@@ -161,12 +161,6 @@ Because this is a static frontend project, it can be opened directly in a browse
 
 For a better development experience, serve the repository with a local web server. For example:
 
-```bash
-python3 -m http.server
-```
-
-Then open `http://localhost:8000` in a browser.
-
 ## Current Status
 
 The project currently provides the frontend page structure and role-specific files. Backend integration, persistent data storage, secure authentication, API validation, and database connectivity are not yet included.
