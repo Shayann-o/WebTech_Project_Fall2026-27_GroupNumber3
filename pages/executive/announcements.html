@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubKit - Announcements</title>
+    <link rel="stylesheet" href="../../css/executive/announcements.css">
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <div class="nav-brand">
+            <span class="logo">ClubKit</span>
+            <span class="badge">Executive Portal</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="members.html" class="nav-item">Members</a>
+            <a href="events.html" class="nav-item">Events</a>
+            <a href="announcements.html" class="nav-item active">Announcements</a>
+           
+        </div>
+        <div class="nav-user">
+            <a href="login.html" class="nav-logout">Sign Out</a>
+        </div>
+    </div>
+
+    
+    <div class="announcements-container">
+
+        
+        <div class="box">
+            <div class="section-header">
+                <h2>Send New Announcement</h2>
+            </div>
+
+            <form onsubmit="return handleSendNotice()">
+                <fieldset class="form-fieldset">
+                    <legend>Compose Message</legend>
+
+                    <div class="form-group">
+                        <label for="noticeAudience">Forward To:</label>
+                        <select id="noticeAudience">
+                            <option value="">-- Select Recipient Tier --</option>
+                            <option value="All Members">All Members</option>
+                            <option value="Volunteers Only">Volunteers Only</option>
+                            <option value="Senior Members (President, VP, GS)">Senior Members (President, VP, GS)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noticeTitle">Notice Title / Subject:</label>
+                        <input type="text" id="noticeTitle" placeholder="e.g. Schedule for Lab 3201 Workshop Setup">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noticeBody">Message:</label>
+                        <textarea id="noticeBody" rows="5" placeholder="Write your notice message here..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Send Announcement</button>
+                        <button type="reset" class="btn-secondary">Clear</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        
+        <div class="box history-box" style="margin-top: 25px;">
+            <div class="section-header">
+                <h2>Previously Sent Notices</h2>
+            </div>
+
+            <div id="noticeHistoryList" class="history-list">
+                
+                <div class="history-card">
+                    <div class="card-top">
+                        <span class="audience-tag">To: Senior Members (President, VP, GS)</span>
+                        <span class="send-date">Nov 10, 2026 - 04:30 PM</span>
+                    </div>
+                    <h3>Semester Budget Allocation Sync</h3>
+                    <p>All core members are requested to review the financial report for the upcoming semester's workshops before Friday.</p>
+                </div>
+
+                <div class="history-card">
+                    <div class="card-top">
+                        <span class="audience-tag">To: Volunteers Only</span>
+                        <span class="send-date">Nov 08, 2026 - 11:15 AM</span>
+                    </div>
+                    <h3>Duty Allocation for Annex 3 Orientation</h3>
+                    <p>Volunteers assigned to the registration and kit distribution desks must report to the ground floor reception by 9:00 AM sharp.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/pages/executive/announcements.js"></script>
+</body>
+</html>

@@ -1,1 +1,209 @@
-<!-- Executive member management page: handles club members and membership requests. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubKit - Member Management</title>
+    <link rel="stylesheet" href="../../css/executive/members.css">
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <div class="nav-brand">
+            <span class="logo">ClubKit</span>
+            <span class="badge">Executive Portal</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="members.html" class="nav-item active">Members</a>
+             <a href="events.html" class="nav-item">Events</a>
+            <a href="announcements.html" class="nav-item">Announcements</a>
+           
+           
+        </div>
+        <div class="nav-user">
+            <a href="login.html" class="nav-logout">Sign Out</a>
+        </div>
+    </div>
+
+    
+    <div class="members-container">
+
+        
+        <div class="box">
+            <div class="section-header">
+                <div>
+                    <h2>Event Volunteer Allocation</h2>
+                    <p class="section-desc">Assign duties to club members for upcoming events</p>
+                </div>
+                <span id="total_assigned" class="badge-count">3 Assigned</span>
+            </div>
+
+    
+            <form onsubmit="return add_volunteer()" class="assign-bar" style="display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap;">
+                
+                <select id="event_name" class="role-select" style="flex: 2; min-width: 180px;">
+                    <option value="">-- Select Event --</option>
+                    <option value="AI & Web Hackathon (Nov 25)">AI & Web Hackathon (Nov 25)</option>
+                    <option value="Cybersecurity Bootcamp (Dec 02)">Cybersecurity Bootcamp (Dec 02)</option>
+                    <option value="Fall Orientation (Dec 10)">Fall Orientation (Dec 10)</option>
+                </select>
+
+                <input 
+                    type="text" 
+                    id="member_name" 
+                    list="member_options" 
+                    placeholder="Type member name or ID..." 
+                    class="role-select" 
+                    style="flex: 2; min-width: 200px; background-color: #ffffff;"
+                    autocomplete="off"
+                >
+                <datalist id="member_options">
+                    <option value="Arif Chowdhury (22-47123-1)">
+                    <option value="Sumaiya Akter (23-50981-2)">
+                    <option value="Mahmudul Hasan (24-52311-3)">
+                    <option value="Rafiq Ahmed (24-57225-2)">
+                    <option value="Nusrat Jahan (23-51204-1)">
+                </datalist>
+
+                <select id="duty_name" class="role-select" style="flex: 1.5; min-width: 150px;">
+                    <option value="">-- Select Duty --</option>
+                    <option value="Registration Desk">Registration Desk</option>
+                    <option value="Lab Support">Lab Support</option>
+                    <option value="Logistics">Logistics</option>
+                    <option value="Stage & Media">Stage & Media</option>
+                </select>
+
+                <button type="submit" class="btn-action btn-approve" style="padding: 7px 14px;">Assign</button>
+            </form>
+
+            
+            <div class="table-responsive">
+                <table class="data-table" id="volunteer_table">
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Member Name (ID)</th>
+                        <th>Duty</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr id="vol_1">
+                        <td><strong>AI & Web Hackathon (Nov 25)</strong></td>
+                        <td>Rafiq Ahmed (24-22233-2)</td>
+                        <td><span class="role-pill role-coordinator">Lab Support</span></td>
+                        <td>
+                            <button type="button" class="btn-action btn-reject" onclick="remove_volunteer('vol_1')">Remove</button>
+                        </td>
+                    </tr>
+                    <tr id="vol_2">
+                        <td><strong>AI & Web Hackathon (Nov 25)</strong></td>
+                        <td>Nusrat Jahan (23-51204-1)</td>
+                        <td><span class="role-pill role-volunteer">Registration Desk</span></td>
+                        <td>
+                            <button type="button" class="btn-action btn-reject" onclick="remove_volunteer('vol_2')">Remove</button>
+                        </td>
+                    </tr>
+                    <tr id="vol_3">
+                        <td><strong>Cybersecurity Bootcamp (Dec 02)</strong></td>
+                        <td>Mahmudul Hasan (24-52311-3)</td>
+                        <td><span class="role-pill role-exec">Logistics</span></td>
+                        <td>
+                            <button type="button" class="btn-action btn-reject" onclick="remove_volunteer('vol_3')">Remove</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="box" style="margin-top: 25px;">
+            <div class="section-header">
+                <div>
+                    <h2>Active Club Members</h2>
+                    <p class="section-desc">Search members and update their club positions</p>
+                </div>
+                <div class="filter-box">
+                    <input type="text" id="search_box" placeholder="Search name or ID..." onkeyup="search_member()">
+                </div>
+            </div>
+
+            
+            <div class="table-responsive">
+                <table class="data-table" id="member_table">
+                    <tr>
+                        <th>Member ID</th>
+                        <th>Student ID</th>
+                        <th>Full Name</th>
+                        <th>Department</th>
+                        <th>Current Role</th>
+                        <th>Change Role</th>
+                    </tr>
+                    <tr>
+                        <td>CM-1001</td>
+                        <td>22-47123-1</td>
+                        <td>Arif Chowdhury</td>
+                        <td>CSE</td>
+                        <td><span class="role-pill role-exec" id="role_1">Executive</span></td>
+                        <td>
+                            <select class="role-select" onchange="change_role(this, 'role_1')">
+                                <option value="Executive" selected>Executive</option>
+                                <option value="Coordinator">Coordinator</option>
+                                <option value="Volunteer">Volunteer</option>
+                                <option value="General Member">General Member</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CM-1002</td>
+                        <td>23-50981-2</td>
+                        <td>Sumaiya Akter</td>
+                        <td>BBA</td>
+                        <td><span class="role-pill role-coordinator" id="role_2">Coordinator</span></td>
+                        <td>
+                            <select class="role-select" onchange="change_role(this, 'role_2')">
+                                <option value="Executive">Executive</option>
+                                <option value="Coordinator" selected>Coordinator</option>
+                                <option value="Volunteer">Volunteer</option>
+                                <option value="General Member">General Member</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CM-1003</td>
+                        <td>24-52311-3</td>
+                        <td>Mahmudul Hasan</td>
+                        <td>EEE</td>
+                        <td><span class="role-pill role-volunteer" id="role_3">Volunteer</span></td>
+                        <td>
+                            <select class="role-select" onchange="change_role(this, 'role_3')">
+                                <option value="Executive">Executive</option>
+                                <option value="Coordinator">Coordinator</option>
+                                <option value="Volunteer" selected>Volunteer</option>
+                                <option value="General Member">General Member</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CM-1004</td>
+                        <td>24-52225-2</td>
+                        <td>Rafiq Ahmed</td>
+                        <td>CSE</td>
+                        <td><span class="role-pill role-volunteer" id="role_4">Volunteer</span></td>
+                        <td>
+                            <select class="role-select" onchange="change_role(this, 'role_4')">
+                                <option value="Executive">Executive</option>
+                                <option value="Coordinator">Coordinator</option>
+                                <option value="Volunteer" selected>Volunteer</option>
+                                <option value="General Member">General Member</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/pages/executive/members.js"></script>
+</body>
+</html>
