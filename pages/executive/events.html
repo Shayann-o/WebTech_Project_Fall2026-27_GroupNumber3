@@ -1,1 +1,136 @@
-<!-- Executive events page: creates, edits, submits, and tracks club events. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubKit - Events</title>
+    <link rel="stylesheet" href="../../css/executive/events.css">
+</head>
+<body>
+
+   
+    <div class="navbar">
+        <div class="nav-brand">
+            <span class="logo">ClubKit</span>
+            <span class="badge">Executive Portal</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-item">Dashboard</a>
+            <a href="members.html" class="nav-item">Members</a>
+            <a href="events.html" class="nav-item active">Events</a>
+            <a href="announcements.html" class="nav-item">Announcements</a>
+            <a href="meetings.html" class="nav-item">Meetings</a>
+            <a href="attendance.html" class="nav-item">Attendance</a>
+        </div>
+        <div class="nav-user">
+            <a href="login.html" class="nav-logout">Sign Out</a>
+        </div>
+    </div>
+
+    
+    <div class="events-container">
+
+       
+        <div class="box">
+            <div class="section-header">
+                <h2>Add Event</h2>
+            </div>
+
+            <form onsubmit="return add_event()">
+                <div class="form-row">
+                    <div class="form-group flex-2">
+                        <label for="event_title">Event Title:</label>
+                        <input type="text" id="event_title" placeholder="e.g. Intro to Competitive Programming">
+                    </div>
+
+                    <div class="form-group flex-1">
+                        <label for="event_type">Category:</label>
+                        <select id="event_type">
+                            <option value="">-- Select Type --</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Contest">Contest</option>
+                            <option value="Seminar">Seminar</option>
+                            <option value="Orientation">Orientation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="event_date">Date:</label>
+                        <input type="date" id="event_date">
+                    </div>
+
+                    <div class="form-group flex-1">
+                        <label for="event_time">Time:</label>
+                        <input type="time" id="event_time">
+                    </div>
+
+                    <div class="form-group flex-2">
+                        <label for="event_venue">Venue:</label>
+                        <input type="text" id="event_venue" placeholder="e.g. Annex 3 - Lab 3201">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Event</button>
+                    <button type="reset" class="btn-secondary">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="box" style="margin-top: 25px;">
+            <div class="section-header">
+                <h2>All Events</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table" id="event_table">
+                    <tr>
+                        <th>Event Title</th>
+                        <th>Category</th>
+                        <th>Date & Time</th>
+                        <th>Venue</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td><strong>AI & Web Hackathon</strong></td>
+                        <td>Contest</td>
+                        <td>2026-11-25 at 10:00</td>
+                        <td>Multipurpose Hall</td>
+                        <td><span class="status-pill status-active" id="status_1">Scheduled</span></td>
+                        <td>
+                            <button type="button" class="btn-cancel" id="btn_1" onclick="cancel_event('status_1', 'btn_1')">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cybersecurity & CTF Bootcamp</strong></td>
+                        <td>Workshop</td>
+                        <td>2026-12-02 at 14:00</td>
+                        <td>Annex 3 - Lab 3201</td>
+                        <td><span class="status-pill status-active" id="status_2">Scheduled</span></td>
+                        <td>
+                            <button type="button" class="btn-cancel" id="btn_2" onclick="cancel_event('status_2', 'btn_2')">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Git & GitHub Essentials</strong></td>
+                        <td>Workshop</td>
+                        <td>2026-11-10 at 15:30</td>
+                        <td>Annex 2 - Room 2104</td>
+                        <td><span class="status-pill status-active" id="status_3">Scheduled</span></td>
+                        <td>
+                            <button type="button" class="btn-cancel" id="btn_3" onclick="cancel_event('status_3', 'btn_3')">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/pages/executive/events.js"></script>
+</body>
+</html>
