@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Event Feedback Form</title>
+
     <link rel="stylesheet" href="../../css/member/member.css">
+
+    <script src="../../js/pages/member/event_feedback.js"></script>
 </head>
+
 <body>
 
     <div class="register-container">
@@ -16,46 +21,78 @@
             <p>Share your experience and help us improve future events!</p>
         </div>
 
-        <form>
+        <form action="#" method="post" onsubmit="return validate_feedback()">
 
+            <!-- Event Name -->
             <div class="form-group">
                 <label for="eventName">Event Name</label>
-                <input type="text" id="eventName" name="eventName"
-                       placeholder="Enter the event name">
+
+                <input type="text" id="eventName" name="eventName" placeholder="Enter the event name">
+
+                <span class="error-message" id="eventName-error"></span>
             </div>
 
+
+            <!-- Overall Experience Rating -->
             <div class="form-group">
                 <label>Overall Experience Rating</label>
+
                 <div class="terms">
+
                     <label><input type="radio" name="experience" value="1"> 1 - Poor</label>
+
                     <label><input type="radio" name="experience" value="2"> 2 - Fair</label>
+
                     <label><input type="radio" name="experience" value="3"> 3 - Good</label>
+
                     <label><input type="radio" name="experience" value="4"> 4 - Very Good</label>
+
                     <label><input type="radio" name="experience" value="5"> 5 - Excellent</label>
+
                 </div>
+
+                <span class="error-message" id="experience-error"></span>
             </div>
 
+
+            <!-- Event Organization Rating -->
             <div class="form-group">
                 <label>Event Organization Rating</label>
+
                 <div class="terms">
+
                     <label><input type="radio" name="organization" value="1"> 1 - Poor</label>
+
                     <label><input type="radio" name="organization" value="2"> 2 - Fair</label>
+
                     <label><input type="radio" name="organization" value="3"> 3 - Good</label>
+
                     <label><input type="radio" name="organization" value="4"> 4 - Very Good</label>
+
                     <label><input type="radio" name="organization" value="5"> 5 - Excellent</label>
+
                 </div>
+
+                <span class="error-message" id="organization-error"></span>
             </div>
 
+
+            <!-- Suggestions -->
             <div class="form-group">
                 <label for="suggestions">Suggestions for Improvement</label>
-                <textarea id="suggestions" name="suggestions"
-                          rows="5"
-                          placeholder="Share your suggestions here..."></textarea>
+
+                <textarea id="suggestions" name="suggestions" rows="5" placeholder="Share your suggestions here..."></textarea>
+
+                <span class="error-message" id="suggestions-error"></span>
             </div>
 
+
+            <!-- Attend Again -->
             <div class="form-group">
                 <label>Would You Attend Again?</label>
+
                 <div class="terms">
+
                     <label>
                         <input type="radio" name="attendAgain" value="Yes">
                         Yes
@@ -70,8 +107,12 @@
                         <input type="radio" name="attendAgain" value="Maybe">
                         Maybe
                     </label>
+
                 </div>
+
+                <span class="error-message" id="attendAgain-error"></span>
             </div>
+
 
             <button type="submit">Submit Feedback</button>
 
