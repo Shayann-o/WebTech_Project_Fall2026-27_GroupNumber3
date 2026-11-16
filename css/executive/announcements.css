@@ -5,17 +5,18 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(248, 250, 252);
-    color: rgb(23, 32, 51);
+    background-color: rgb(244, 247, 246);
+    color: rgb(20, 35, 32);
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
 
 .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid rgb(226, 232, 240);
-    padding: 12px 30px;
+    width: 100%;
+    background-color: rgb(15, 23, 42);
+    border-bottom: 3px solid rgb(13, 148, 136);
+    padding: 16px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,50 +30,61 @@ body {
 
 .logo {
     display: inline-block;
-    background-color: rgb(79, 70, 229);
+    background-color: rgb(13, 148, 136);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 8px 14px;
+    border-radius: 5px;
 }
 
 .badge {
-    background-color: rgb(238, 242, 255);
-    color: rgb(79, 70, 229);
-    border: 1px solid rgb(199, 210, 254);
+    background-color: rgb(30, 41, 59);
+    color: rgb(94, 234, 212);
+    border: 1px solid rgb(51, 65, 85);
     font-size: 12px;
     font-weight: bold;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
 }
 
 .nav-links {
     display: flex;
-    gap: 18px;
+    gap: 28px;
 }
 
 .nav-item {
     text-decoration: none;
-    color: rgb(100, 116, 139);
-    font-weight: 500;
-    font-size: 14px;
+    color: rgb(203, 213, 225);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 4px;
+    border-bottom: 3px solid transparent;
 }
 
-.nav-item:hover, .nav-item.active {
-    color: rgb(79, 70, 229);
-    font-weight: bold;
+.nav-item:hover {
+    color: rgb(94, 234, 212);
+}
+
+.nav-item.active {
+    color: #ffffff;
+    border-bottom: 3px solid rgb(20, 184, 166);
 }
 
 .nav-logout {
-    color: rgb(220, 38, 38);
+    display: inline-block;
+    background-color: rgb(153, 27, 27);
+    color: #ffffff;
+    border: 1px solid rgb(185, 28, 28);
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 4px;
 }
 
 .nav-logout:hover {
-    text-decoration: underline;
+    background-color: rgb(220, 38, 38);
 }
 
 
@@ -85,7 +97,7 @@ body {
 .box {
     background-color: #ffffff;
     border: 1px solid rgb(226, 232, 240);
-    border-top: 4px solid rgb(79, 70, 229);
+    border-top: 4px solid rgb(13, 148, 136);
     border-radius: 6px;
     padding: 24px;
 }
@@ -113,9 +125,9 @@ body {
 
 .badge-count {
     font-size: 12px;
-    background-color: rgb(238, 242, 255);
-    color: rgb(79, 70, 229);
-    border: 1px solid rgb(199, 210, 254);
+    background-color: rgb(240, 253, 250);
+    color: rgb(15, 118, 110);
+    border: 1px solid rgb(153, 246, 228);
     font-weight: bold;
     padding: 4px 10px;
     border-radius: 4px;
@@ -169,7 +181,7 @@ input[type="text"], select, textarea {
 }
 
 input[type="text"]:focus, select:focus, textarea:focus {
-    border-color: rgb(79, 70, 229);
+    border-color: rgb(13, 148, 136);
 }
 
 .error {
@@ -185,7 +197,7 @@ input[type="text"]:focus, select:focus, textarea:focus {
 }
 
 .btn-primary {
-    background-color: rgb(79, 70, 229);
+    background-color: rgb(13, 148, 136);
     color: #ffffff;
     border: none;
     padding: 8px 16px;
@@ -196,7 +208,7 @@ input[type="text"]:focus, select:focus, textarea:focus {
 }
 
 .btn-primary:hover {
-    background-color: rgb(67, 56, 202);
+    background-color: rgb(15, 118, 110);
 }
 
 .btn-secondary {
@@ -214,18 +226,18 @@ input[type="text"]:focus, select:focus, textarea:focus {
 }
 
 
-.feed-list {
+.history-list, .feed-list {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
 
-.notice-card {
+.history-card, .notice-card {
     border: 1px solid rgb(226, 232, 240);
     border-radius: 6px;
     padding: 16px;
     background-color: rgb(248, 250, 252);
-    border-left: 4px solid rgb(203, 213, 225);
+    border-left: 4px solid rgb(13, 148, 136);
 }
 
 .notice-card.priority-urgent {
@@ -234,22 +246,26 @@ input[type="text"]:focus, select:focus, textarea:focus {
 }
 
 .notice-card.priority-standard {
-    border-left-color: rgb(79, 70, 229);
+    border-left-color: rgb(13, 148, 136);
     background-color: #ffffff;
 }
 
-.notice-meta {
+.card-top, .notice-meta {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 8px;
     margin-bottom: 8px;
 }
 
-.pill-audience {
+.audience-tag, .pill-audience {
     font-size: 11px;
     font-weight: bold;
-    padding: 2px 7px;
+    padding: 3px 8px;
     border-radius: 3px;
+    background-color: rgb(240, 253, 250);
+    color: rgb(15, 118, 110);
+    border: 1px solid rgb(153, 246, 228);
 }
 
 .audience-all {
@@ -265,9 +281,9 @@ input[type="text"]:focus, select:focus, textarea:focus {
 }
 
 .audience-leadership {
-    background-color: rgb(238, 242, 255);
-    color: rgb(79, 70, 229);
-    border: 1px solid rgb(199, 210, 254);
+    background-color: rgb(240, 253, 250);
+    color: rgb(15, 118, 110);
+    border: 1px solid rgb(153, 246, 228);
 }
 
 .pill-priority {
@@ -277,19 +293,19 @@ input[type="text"]:focus, select:focus, textarea:focus {
     color: rgb(100, 116, 139);
 }
 
-.notice-timestamp {
+.send-date, .notice-timestamp {
     margin-left: auto;
     font-size: 11px;
     color: rgb(148, 163, 184);
 }
 
-.notice-card h3 {
+.history-card h3, .notice-card h3 {
     margin: 0 0 6px 0;
     font-size: 14px;
     color: rgb(23, 32, 51);
 }
 
-.notice-card p {
+.history-card p, .notice-card p {
     margin: 0;
     font-size: 13px;
     line-height: 1.5;

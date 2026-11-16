@@ -8,68 +8,61 @@
 </head>
 <body>
 
-    <!-- Header Nav-->
-    <header class="navbar">
+    
+    <div class="navbar">
         <div class="nav-brand">
             <span class="logo">ClubKit</span>
             <span class="badge">Executive Portal</span>
         </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-item active">Dashboard</a>
+          
+        </div>
         <div class="nav-user">
-            <span>Welcome, <strong>Executive</strong></span>
+            <span class="welcome-text">Welcome, <strong>Executive</strong></span>
             <a href="login.html" class="nav-logout">Sign Out</a>
         </div>
-    </header>
+    </div>
 
     
-    <main class="Container dashboard-container">
+    <div class="dashboard-container">
 
         <div class="box">
-            
             <div class="dashboard-header">
                 <h1>Executive Workspace</h1>
                 <p>Select a module to manage club operations</p>
             </div>
 
-            
             <div class="menu-grid">
 
-                <!-- Member Management -->
-                <a href="#" class="menu-card">
+            
+                <a href="members.html" class="menu-card">
                     <div class="card-icon">👥</div>
                     <h2>Member Management</h2>
-                    <p>Review new executive registrations, approve applicants, and view the active club roster.</p>
+                    <p>Assign event volunteers, search active members, and promote committee roles.</p>
                     <span class="card-link">Open Members &rarr;</span>
                 </a>
 
-                <!-- Meeting Schedule -->
-                <a href="#" class="menu-card">
+                
+                <a href="events.html" class="menu-card">
                     <div class="card-icon">📅</div>
-                    <h2>Meetings</h2>
-                    <p>Schedule committee syncs, post meeting agendas, set venue locations.</p>
-                    <span class="card-link">Open Meetings &rarr;</span>
+                    <h2>Event Management</h2>
+                    <p>Create workshops, contests, and seminars, or cancel scheduled events.</p>
+                    <span class="card-link">Open Events &rarr;</span>
                 </a>
 
-                <!--  Announcements  -->
-                <a href="#" class="menu-card">
+                
+                <a href="announcements.html" class="menu-card">
                     <div class="card-icon">📢</div>
                     <h2>Announcements</h2>
-                    <p>Publish club notices, event circulars, and updates to the member notice feed.</p>
+                    <p>Send targeted notices to all members, volunteers, or senior executives.</p>
                     <span class="card-link">Open Announcements &rarr;</span>
                 </a>
 
-                <!-- Attendance -->
-                <a href="#" class="menu-card">
-                    <div class="card-icon">✅</div>
-                    <h2>Attendance</h2>
-                    <p>Record member attendance for meetings and workshops.</p>
-                    <span class="card-link">Open Attendance &rarr;</span>
-                </a>
-
             </div>
-
         </div>
 
-    </main>
+    </div>
 
 </body>
 </html>
