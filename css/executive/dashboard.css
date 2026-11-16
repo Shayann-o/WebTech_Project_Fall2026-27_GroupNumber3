@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 247, 246);
+    color: rgb(20, 35, 32);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: rgb(15, 23, 42);
+    border-bottom: 3px solid rgb(13, 148, 136);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    display: inline-block;
+    background-color: rgb(13, 148, 136);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.badge {
+    background-color: rgb(30, 41, 59);
+    color: rgb(94, 234, 212);
+    border: 1px solid rgb(51, 65, 85);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgb(203, 213, 225);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 4px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+    color: rgb(94, 234, 212);
+}
+
+.nav-item.active {
+    color: #ffffff;
+    border-bottom: 3px solid rgb(20, 184, 166);
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.welcome-text {
+    color: rgb(203, 213, 225);
+    font-size: 13px;
+}
+
+.nav-logout {
+    display: inline-block;
+    background-color: rgb(153, 27, 27);
+    color: #ffffff;
+    border: 1px solid rgb(185, 28, 28);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 4px;
+}
+
+.nav-logout:hover {
+    background-color: rgb(220, 38, 38);
+}
+
+
+.dashboard-container {
+    max-width: 1020px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid rgb(209, 218, 215);
+    border-top: 4px solid rgb(13, 148, 136);
+    border-radius: 6px;
+    padding: 28px;
+}
+
+.dashboard-header {
+    border-bottom: 1px solid rgb(226, 232, 240);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: rgb(15, 23, 42);
+}
+
+.dashboard-header p {
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    color: rgb(100, 116, 139);
+}
+
+
+.menu-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    flex: 1;
+    min-width: 260px;
+    background-color: rgb(248, 250, 252);
+    border: 1px solid rgb(203, 213, 225);
+    border-left: 4px solid rgb(13, 148, 136);
+    border-radius: 6px;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(15, 23, 42);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    background-color: rgb(240, 253, 250);
+    border-color: rgb(13, 148, 136);
+}
+
+.card-icon {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.menu-card h2 {
+    margin: 0 0 8px 0;
+    font-size: 17px;
+    color: rgb(15, 23, 42);
+}
+
+.menu-card p {
+    margin: 0 0 16px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgb(71, 85, 105);
+    flex: 1;
+}
+
+.card-link {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(13, 148, 136);
+}

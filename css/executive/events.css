@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 247, 246);
+    color: rgb(20, 35, 32);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: rgb(15, 23, 42);
+    border-bottom: 3px solid rgb(13, 148, 136);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    display: inline-block;
+    background-color: rgb(13, 148, 136);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.badge {
+    background-color: rgb(30, 41, 59);
+    color: rgb(94, 234, 212);
+    border: 1px solid rgb(51, 65, 85);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgb(203, 213, 225);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 4px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+    color: rgb(94, 234, 212);
+}
+
+.nav-item.active {
+    color: #ffffff;
+    border-bottom: 3px solid rgb(20, 184, 166);
+}
+
+.nav-logout {
+    display: inline-block;
+    background-color: rgb(153, 27, 27);
+    color: #ffffff;
+    border: 1px solid rgb(185, 28, 28);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 4px;
+}
+
+.nav-logout:hover {
+    background-color: rgb(220, 38, 38);
+}
+
+
+.events-container {
+    max-width: 1020px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid rgb(209, 218, 215);
+    border-top: 4px solid rgb(13, 148, 136);
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.section-header {
+    border-bottom: 1px solid rgb(226, 232, 240);
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: rgb(15, 23, 42);
+}
+
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+    min-width: 150px;
+}
+
+.flex-2 {
+    flex: 2;
+    min-width: 220px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(30, 41, 59);
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 8px 10px;
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: rgb(248, 250, 252);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    background-color: rgb(13, 148, 136);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: rgb(15, 118, 110);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    border: 1px solid rgb(203, 213, 225);
+    color: rgb(71, 85, 105);
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(241, 245, 249);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+.data-table th {
+    padding: 12px;
+    background-color: rgb(241, 245, 249);
+    color: rgb(30, 41, 59);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(203, 213, 225);
+}
+
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgb(226, 232, 240);
+}
+
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-active {
+    background-color: rgb(240, 253, 250);
+    color: rgb(15, 118, 110);
+    border: 1px solid rgb(153, 246, 228);
+}
+
+.status-cancelled {
+    background-color: rgb(254, 242, 242);
+    color: rgb(220, 38, 38);
+    border: 1px solid rgb(252, 165, 165);
+}
+
+
+.btn-cancel {
+    background-color: #ffffff;
+    border: 1px solid rgb(203, 213, 225);
+    color: rgb(220, 38, 38);
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: rgb(254, 242, 242);
+    border-color: rgb(252, 165, 165);
+}
+
+.btn-cancel:disabled {
+    background-color: rgb(241, 245, 249);
+    border-color: rgb(203, 213, 225);
+    color: rgb(148, 163, 184);
+    cursor: not-allowed;
+}
