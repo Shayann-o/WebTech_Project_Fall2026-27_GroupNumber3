@@ -103,6 +103,34 @@ body {
 }
 
 
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 13px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clear-btn {
+    background-color: #FFFFFF;
+    color: #B45309;
+    border: 1px solid #D97706;
+}
+
+.clear-btn:hover {
+    background-color: #FEF3C7;
+}
+
+.button-group .submit-btn {
+    margin-top: 0;
+}
 
 .switch-text {
     text-align: center;
