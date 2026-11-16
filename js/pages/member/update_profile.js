@@ -2,108 +2,102 @@
 function validate_profile() {
 
     let studentId = document.getElementById("student-id").value.trim();
-
     let name = document.getElementById("name").value.trim();
-
     let email = document.getElementById("email").value.trim();
-
     let phone = document.getElementById("phone").value.trim();
 
-
     let department = document.getElementById("department").value;
-
     let semester = document.getElementById("semester").value;
 
-
     let club = document.getElementById("club").value;
-
     let interest = document.getElementById("interest").value.trim();
 
+    
+    document.getElementById("StudentIDError").innerHTML = "";
+    document.getElementById("NameError").innerHTML = "";
+    document.getElementById("EmailError").innerHTML = "";
+    document.getElementById("PhoneError").innerHTML = "";
+    document.getElementById("DepartmentError").innerHTML = "";
+    document.getElementById("SemesterError").innerHTML = "";
+    document.getElementById("ClubError").innerHTML = "";
+    document.getElementById("InterestError").innerHTML = "";
+
+    
     if (studentId === "") {
-
-        alert("Please enter your Student ID.");
-
-        return false;
+        document.getElementById("StudentIDError").innerHTML =
+            "Please enter your student ID.";
     }
 
-    if (name === "") {
-
-        alert("Please enter your full name.");
-
-        return false;
-    }
-
+    
     let namePattern = /^[A-Za-z ]+$/;
 
-    if (!namePattern.test(name)) {
-
-        alert("Name should contain only letters and spaces.");
-
-        return false;
+    if (name === "") {
+        document.getElementById("NameError").innerHTML =
+            "Please enter your full name.";
+    }
+    else if (!namePattern.test(name)) {
+        document.getElementById("NameError").innerHTML =
+            "Name can only contain letters and spaces.";
     }
 
-    if (email === "") {
-
-        alert("Please enter your university email.");
-
-        return false;
-    }
-
+   
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailPattern.test(email)) {
-
-        alert("Please enter a valid email address.");
-
-        return false;
+    if (email === "") {
+        document.getElementById("EmailError").innerHTML =
+            "Please enter your university email.";
     }
+    else if (!emailPattern.test(email)) {
+        document.getElementById("EmailError").innerHTML =
+            "Please enter a valid email address.";
+    }
+
+    let phonePattern = /^(\+?88)?01[3-9]\d{8}$/;
 
     if (phone === "") {
-
-        alert("Please enter your phone number.");
-
-        return false;
+        document.getElementById("PhoneError").innerHTML =
+            "Please enter your phone number.";
     }
-
-    let phonePattern = /^(\+88)?01[3-9]\d{8}$/;
-
-    if (!phonePattern.test(phone)) {
-
-        alert("Please enter a valid Bangladeshi phone number.");
-
-        return false;
+    else if (!phonePattern.test(phone)) {
+        document.getElementById("PhoneError").innerHTML =
+            "Please enter a valid Bangladeshi phone number.";
     }
 
     if (department === "") {
-
-        alert("Please select your department.");
-
-        return false;
+        document.getElementById("DepartmentError").innerHTML =
+            "Please select your department.";
     }
 
     if (semester === "") {
-
-        alert("Please select your semester.");
-
-        return false;
+        document.getElementById("SemesterError").innerHTML =
+            "Please select your semester.";
     }
 
+    
     if (club === "") {
-
-        alert("Please select your club.");
-
-        return false;
+        document.getElementById("ClubError").innerHTML =
+            "Please select your club.";
     }
 
     if (interest === "") {
+        document.getElementById("InterestError").innerHTML =
+            "Please enter your areas of interest.";
+    }
 
-        alert("Please enter your areas of interest.");
-
+    if (
+        studentId === "" ||
+        name === "" || !namePattern.test(name) ||
+        email === "" || !emailPattern.test(email) ||
+        phone === "" || !phonePattern.test(phone) ||
+        department === "" ||
+        semester === "" ||
+        club === "" ||
+        interest === ""
+    ) {
         return false;
     }
 
     alert("Your profile has been successfully updated!");
 
     return true;
-
 }
