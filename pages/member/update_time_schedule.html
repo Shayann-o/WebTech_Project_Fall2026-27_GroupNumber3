@@ -27,19 +27,12 @@
 
                 <select id="class-days" name="class-days">
                     <option value="">Select Class Days</option>
-
-                    <option value="Saturday-Monday-Wednesday">
-                        Saturday - Monday - Wednesday
-                    </option>
-
-                    <option value="Sunday-Tuesday-Thursday">
-                        Sunday - Tuesday - Thursday
-                    </option>
-
-                    <option value="Friday-Saturday">
-                        Friday - Saturday
-                    </option>
+                    <option value="Saturday-Monday-Wednesday">Saturday - Monday - Wednesday</option>
+                    <option value="Sunday-Tuesday-Thursday">Sunday - Tuesday - Thursday</option>
+                    <option value="Friday-Saturday">Friday - Saturday</option>
                 </select>
+
+                <p id="ClassDaysError" class="error-message"></p>
 
                 <br><br>
 
@@ -47,31 +40,15 @@
 
                 <select id="class-time" name="class-time">
                     <option value="">Select Class Time</option>
-
-                    <option value="8:00 AM - 9:30 AM">
-                        8:00 AM - 9:30 AM
-                    </option>
-
-                    <option value="9:45 AM - 11:15 AM">
-                        9:45 AM - 11:15 AM
-                    </option>
-
-                    <option value="11:30 AM - 1:00 PM">
-                        11:30 AM - 1:00 PM
-                    </option>
-
-                    <option value="1:15 PM - 2:45 PM">
-                        1:15 PM - 2:45 PM
-                    </option>
-
-                    <option value="3:00 PM - 4:30 PM">
-                        3:00 PM - 4:30 PM
-                    </option>
-
-                    <option value="4:45 PM - 6:15 PM">
-                        4:45 PM - 6:15 PM
-                    </option>
+                    <option value="8:00 AM - 9:30 AM">8:00 AM - 9:30 AM</option>
+                    <option value="9:45 AM - 11:15 AM">9:45 AM - 11:15 AM</option>
+                    <option value="11:30 AM - 1:00 PM">11:30 AM - 1:00 PM</option>
+                    <option value="1:15 PM - 2:45 PM">1:15 PM - 2:45 PM</option>
+                    <option value="3:00 PM - 4:30 PM">3:00 PM - 4:30 PM</option>
+                    <option value="4:45 PM - 6:15 PM">4:45 PM - 6:15 PM</option>
                 </select>
+
+                <p id="ClassTimeError" class="error-message"></p>
 
             </fieldset>
 
@@ -85,48 +62,43 @@
                 <div class="club-days-options">
 
                     <div>
-                        <input type="checkbox" id="saturday"
-                        name="club-days[]" value="Saturday">
+                        <input type="checkbox" id="saturday" name="club-days[]" value="Saturday">
                         <label for="saturday">Saturday</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="sunday"
-                        name="club-days[]" value="Sunday">
+                        <input type="checkbox" id="sunday" name="club-days[]" value="Sunday">
                         <label for="sunday">Sunday</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="monday"
-                        name="club-days[]" value="Monday">
+                        <input type="checkbox" id="monday" name="club-days[]" value="Monday">
                         <label for="monday">Monday</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="tuesday"
-                        name="club-days[]" value="Tuesday">
+                        <input type="checkbox" id="tuesday" name="club-days[]" value="Tuesday">
                         <label for="tuesday">Tuesday</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="wednesday"
-                        name="club-days[]" value="Wednesday">
+                        <input type="checkbox" id="wednesday" name="club-days[]" value="Wednesday">
                         <label for="wednesday">Wednesday</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="thursday"
-                        name="club-days[]" value="Thursday">
+                        <input type="checkbox" id="thursday" name="club-days[]" value="Thursday">
                         <label for="thursday">Thursday</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="friday"
-                        name="club-days[]" value="Friday">
+                        <input type="checkbox" id="friday" name="club-days[]" value="Friday">
                         <label for="friday">Friday</label>
                     </div>
 
                 </div>
+
+                <p id="ClubDaysError" class="error-message"></p>
 
                 <br><br>
 
@@ -134,31 +106,15 @@
 
                 <select id="available-time" name="available-time">
                     <option value="">Select Available Time</option>
-
-                    <option value="8:00 AM - 10:00 AM">
-                        8:00 AM - 10:00 AM
-                    </option>
-
-                    <option value="10:00 AM - 12:00 PM">
-                        10:00 AM - 12:00 PM
-                    </option>
-
-                    <option value="12:00 PM - 2:00 PM">
-                        12:00 PM - 2:00 PM
-                    </option>
-
-                    <option value="2:00 PM - 4:00 PM">
-                        2:00 PM - 4:00 PM
-                    </option>
-
-                    <option value="4:00 PM - 6:00 PM">
-                        4:00 PM - 6:00 PM
-                    </option>
-
-                    <option value="Flexible">
-                        Flexible / Any Time
-                    </option>
+                    <option value="8:00 AM - 10:00 AM">8:00 AM - 10:00 AM</option>
+                    <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                    <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+                    <option value="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</option>
+                    <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+                    <option value="Flexible">Flexible / Any Time</option>
                 </select>
+
+                <p id="AvailableTimeError" class="error-message"></p>
 
             </fieldset>
 
@@ -172,12 +128,12 @@
                 </label>
 
                 <select id="part-time-job" name="part-time-job">
-
                     <option value="">Select an Option</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
-
                 </select>
+
+                <p id="PartTimeJobError" class="error-message"></p>
 
                 <br><br>
 
@@ -189,6 +145,8 @@
                     id="job-details"
                     name="job-details"
                     placeholder="Mention your job and working hours, if applicable"></textarea>
+
+                <p id="JobDetailsError" class="error-message"></p>
 
             </fieldset>
 
